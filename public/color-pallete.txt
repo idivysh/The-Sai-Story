@@ -1,0 +1,66 @@
+1. Midnight Black
+
+Main background · page canvas
+HEX
+#050912
+ Copy
+
+
+
+
+2. Electric Blue
+
+Primary accent · links, focus states, technology details
+HEX
+#00A8FF
+ Copy
+
+
+
+
+3. Metallic Silver
+
+Main text · headings · neutral highlights
+HEX
+#DDE8F7
+ Copy
+
+
+
+
+4. Signature Gold
+
+The word “SAI” · important highlights · achievements
+HEX
+#FFC247
+ Copy
+
+
+
+
+5. Ember Orange
+
+Warm glow · gold-to-red gradients · motion effects
+HEX
+#FF7138
+ Copy
+
+
+
+
+6. Signature Red
+
+Logo period · small emphasis · selected details
+HEX
+#FF3038
+ Copy
+
+
+
+
+7. Muted Steel
+
+Descriptions · secondary labels · supporting text
+HEX
+#94A6BD
+ Copy
