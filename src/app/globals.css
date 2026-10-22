@@ -950,7 +950,7 @@ h6 {
 
 @media (max-width: 600px) {
   .site-footer {
-    padding: 34px 20px 0;
+    padding: 34px 28px 0;
   }
 
   .footer-main {
@@ -967,10 +967,15 @@ h6 {
 
   .footer-groups {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 30px 20px;
+    gap: 30px 60px;
+    width: fit-content;
+    margin-inline: auto;
+    justify-items: start;
   }
 
   .footer-group {
+    align-items: flex-start;
+    text-align: left;
     gap: 12px;
   }
 
@@ -983,15 +988,19 @@ h6 {
   }
 
   .footer-credits {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
     margin-top: 34px;
     padding: 18px 0;
   }
 
   .footer-credits p {
-    font-size: 11px;
+    margin: 0;
+    font-size: 9px;
+    white-space: nowrap;
   }
 }
 

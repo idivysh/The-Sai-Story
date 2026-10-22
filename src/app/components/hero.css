@@ -1,4 +1,3 @@
-
 .hero-section {
   position: relative;
   width: 100%;
@@ -7,26 +6,25 @@
   color: #DDE8F7;
   background: transparent;
 }
-
 .hero-container {
+  position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
-  grid-template-areas:
-    "content image"
-    "actions image"
-    "scroll image";
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 0.85fr);
+  grid-template-areas: "content image details";
   align-items: stretch;
-  column-gap: clamp(32px, 5vw, 80px);
-  row-gap: 26px;
+  gap: 24px;
   width: 100%;
-  max-width: 1440px;
+  max-width: 1700px;
+  min-height: min(720px, calc(100svh - 120px));
   margin: 0 auto;
 }
 
 .hero-content {
   grid-area: content;
-  align-self: end;
+  align-self: start;
   min-width: 0;
+  padding-top: 12px;
+  z-index: 2;
 }
 
 .hero-eyebrow {
@@ -48,7 +46,7 @@
   margin: 0;
   color: #DDE8F7;
   font-family: var(--font-bebas-neue), sans-serif;
-  font-size: clamp(58px, 6.7vw, 96px);
+  font-size: clamp(54px, 5.2vw, 88px);
   font-weight: 400;
   line-height: 0.98;
 }
@@ -57,12 +55,11 @@
   color: #C5D0DF;
 }
 
-
 .hero-tagline {
   margin: 24px 0 14px;
   color: #C0CBD9;
   font-family: var(--font-bebas-neue), sans-serif;
-  font-size: clamp(27px, 3vw, 38px);
+  font-size: clamp(25px, 2.5vw, 38px);
   font-weight: 400;
   line-height: 1.2;
 }
@@ -71,48 +68,76 @@
   color: #FFC247;
 }
 
+/* Center portrait */
+
+.hero-image {
+  grid-area: image;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  align-self: stretch;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-portrait {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  border: 0;
+  border-radius: 0;
+}
+
+/* Desktop Image */
+
+.hero-portrait-desktop {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 145%;
+  height: 100%;
+  max-width: none;
+  margin: auto;
+  object-fit: contain;
+  object-position: center;
+  transform: translateX(-28%);
+}
+
+/* Mobile image is hidden on desktop */
+
+.hero-portrait-mobile {
+  display: none;
+}
+
+/* Right-side details */
+
+.hero-details {
+  grid-area: details;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-bottom: 36px;
+  z-index: 2;
+}
+
 .hero-description {
-  max-width: 530px;
-  margin: 0;
+  max-width: 400px;
+  margin: 0 0 22px;
   color: #94A6BD;
   font-family: var(--font-manrope), sans-serif;
   font-size: 14px;
   line-height: 1.9;
 }
 
-.hero-image {
-  grid-area: image;
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  min-width: 0;
-  height: 100%;
-  align-self: stretch;
-}
-
-.hero-portrait {
-  display: block;
-  width: 100%;
-  max-width: 460px;
-  height: 100%;
-  min-height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  border-radius: 16px;
-}
-
-/* Desktop image */
-.hero-portrait-desktop {
-  display: block;
-}
-
-/* Hide mobile image on desktop */
-.hero-portrait-mobile {
-  display: none;
-}
-
 .hero-actions {
-  grid-area: actions;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -132,20 +157,12 @@
   font-size: 12px;
   font-weight: 700;
   text-decoration: none;
+  white-space: nowrap;
   transition:
     color 220ms ease,
     background-color 220ms ease,
     border-color 220ms ease,
     transform 220ms ease;
-}
-
-.hero-button span {
-  font-size: 15px;
-  transition: transform 220ms ease;
-}
-
-.hero-button:hover span {
-  transform: translate(2px, -2px);
 }
 
 .hero-button-primary {
@@ -170,63 +187,92 @@
   transform: translateY(-2px);
 }
 
-.hero-scroll {
-  grid-area: scroll;
-  display: inline-flex;
-  width: fit-content;
-  align-items: center;
-  gap: 11px;
-  margin-top: 14px;
-  color: #77889E;
-  font-family: var(--font-manrope), sans-serif;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.hero-scroll-line {
-  width: 30px;
-  height: 1px;
-  background: #64758A;
-}
-
-.hero-scroll:hover {
-  color: #C1CDDC;
-}
-
 /* Tablet */
 
-@media (max-width: 1024px) {
+
+@media (max-width: 1100px) and (min-width: 769px) {
   .hero-section {
-    padding: 85px 4% 50px;
+    padding: 135px 3% 40px;
+    margin-top: 0;
   }
 
   .hero-container {
-    grid-template-columns: minmax(0, 1.1fr) minmax(230px, 0.9fr);
-    column-gap: 28px;
-    min-height: 500px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-areas: "content image details";
+    align-items: center;
+    column-gap: 12px;
+    row-gap: 0;
+    min-height: 540px;
+  }
+
+  .hero-content {
+    grid-area: content;
+    align-self: start;
+    padding-top: 24px;
   }
 
   .hero-title {
-    font-size: clamp(54px, 7vw, 76px);
+    font-size: clamp(38px, 4.3vw, 54px);
   }
 
-  .hero-portrait {
-    max-height: 500px;
+  .hero-tagline {
+    margin-top: 18px;
+    font-size: clamp(20px, 2.4vw, 28px);
+  }
+
+  .hero-image {
+    grid-area: image;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-portrait-desktop {
+    display: block;
+    width: 155%;
+    max-width: none;
+    height: auto;
+    max-height: 440px;
+    object-fit: contain;
+    transform: translateX(-8%);
+  }
+
+  .hero-details {
+    grid-area: details;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-self: stretch;
+    padding-bottom: 40px;
   }
 
   .hero-description {
-    font-size: 13px;
+    max-width: 100%;
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .hero-button {
+    min-height: 42px;
+    padding: 0 10px;
+    font-size: 10px;
   }
 }
 
-/* Mobile: text → image → buttons */
+
+/* Mobile: heading → portrait → description and buttons */
 
 @media (max-width: 768px) {
   .hero-section {
-    padding: 65px 22px 40px;
+    padding: 145px 22px 30px;
+    margin-top: 0;
   }
 
   .hero-container {
@@ -234,14 +280,12 @@
     grid-template-areas:
       "content"
       "image"
-      "actions"
-      "scroll";
-    row-gap: 0;
+      "details";
     min-height: auto;
   }
 
   .hero-content {
-    align-self: auto;
+    padding-top: 0;
     text-align: center;
   }
 
@@ -252,42 +296,46 @@
   }
 
   .hero-title {
-    font-size: clamp(56px, 11.5vw, 78px);
+    font-size: clamp(48px, 10.5vw, 72px);
     line-height: 0.98;
   }
 
   .hero-tagline {
-    margin: 19px 0 13px;
-    font-size: clamp(27px, 6vw, 34px);
-  }
-
-  .hero-description {
-    max-width: 480px;
-    margin: 0 auto;
-    font-size: 13px;
-    line-height: 1.85;
+    margin: 19px 0 0;
+    font-size: clamp(25px, 6vw, 34px);
   }
 
   .hero-image {
-    height: auto;
+    width: 100%;
     min-height: 0;
-    margin: 22px auto 25px;
+    height: auto;
+    margin: 8px auto 12px;
+    overflow: hidden;
   }
 
+  .hero-portrait-mobile {
+    display: block;
+    position: static;
+    width: 100%;
+    height: auto;
+    max-height: 340px;
+    margin: 0 auto;
+    object-fit: contain;
+    transform: none;
+  }
 
   .hero-portrait-desktop {
     display: none;
   }
 
-  .hero-portrait-mobile {
-    display: block;
-    width: min(82%, 340px);
-    height: auto;
-    min-height: 0;
-    max-height: 430px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 16px;
+  .hero-details {
+    align-items: center;
+    padding: 0;
+    text-align: center;
+  }
+
+  .hero-description {
+    margin-bottom: 16px;
   }
 
   .hero-actions {
@@ -299,11 +347,6 @@
     min-height: 46px;
     padding: 0 15px;
     font-size: 11px;
-  }
-
-  .hero-scroll {
-    justify-self: center;
-    margin-top: 32px;
   }
 }
 
@@ -321,7 +364,11 @@
   }
 
   .hero-title {
-    font-size: 53px;
+    font-size: 46px;
+  }
+
+  .hero-tagline {
+    font-size: 25px;
   }
 
   .hero-actions {
@@ -338,8 +385,7 @@
 /* Accessibility */
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-button,
-  .hero-button span {
+  .hero-button {
     transition: none;
   }
 }

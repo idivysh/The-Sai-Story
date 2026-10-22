@@ -13,7 +13,7 @@ export default function Hero() {
           </p>
 
           <h1 className="hero-title">
-            Hi, I&apos;m Divyamsh  
+            Hi, I&apos;m Divyamsh
             <br />
             <span>Sai Vengala.</span>
           </h1>
@@ -21,16 +21,10 @@ export default function Hero() {
           <h2 className="hero-tagline">
             I Build. <span>I Create.</span> I Evolve.
           </h2>
-
-          <p className="hero-description">
-            Software developer, AI/ML enthusiast, web and app developer,
-            and graphic designer. Founder of Vijnah Studio, bringing
-            technology and visual creativity together.
-          </p>
         </div>
 
         <div className="hero-image">
-        <Image
+          <Image
             src="/assets/hero-myimage-desktop.png"
             alt="Divyamsh Sai"
             width={600}
@@ -38,9 +32,9 @@ export default function Hero() {
             priority
             sizes="(max-width: 768px) 0px, 42vw"
             className="hero-portrait hero-portrait-desktop"
-        />
+          />
 
-        <Image
+          <Image
             src="/assets/hero-myimage-mobile.png"
             alt="Divyamsh Sai"
             width={500}
@@ -48,25 +42,26 @@ export default function Hero() {
             priority
             sizes="(max-width: 768px) 85vw, 0px"
             className="hero-portrait hero-portrait-mobile"
-        />
+          />
         </div>
 
-        <div className="hero-actions">
-          <Link
-            href="/projects"
-            className="hero-button hero-button-primary"
-          >
-            Explore My Work
-          </Link>
+        <div className="hero-details">
+          <p className="hero-description">
+            Software developer, AI/ML enthusiast, web and app developer,
+            and graphic designer. Founder of Vijnah Studio, bringing
+            technology and visual creativity together.
+          </p>
 
-          <Link
-            href="/contact"
-            className="hero-button hero-button-secondary"
-          >
-            Let&apos;s Connect
-          </Link>
+          <div className="hero-actions">
+            <Link href="/projects" className="hero-button hero-button-primary">
+              Explore My Work
+            </Link>
+
+            <Link href="/contact" className="hero-button hero-button-secondary">
+              Let&apos;s Connect
+            </Link>
+          </div>
         </div>
-
       </div>
     </section>
   );
