@@ -1,0 +1,486 @@
+
+/* ========================================
+   ABOUT — THE SAI STORY
+   Transparent background; inherits site BG
+======================================== */
+
+.about-section {
+  width: 100%;
+  padding: 72px 5% 64px;
+  color: #DDE8F7;
+  background: transparent;
+}
+
+.about-container {
+  width: 100%;
+  max-width: 1700px;
+  margin: 0 auto;
+}
+
+/* Section label */
+
+.about-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(148, 166, 189, 0.22);
+  color: #94A6BD;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+
+.about-topline > span:first-child > span {
+  color: #00A8FF;
+}
+
+.about-brand {
+  color: #94A6BD;
+  white-space: nowrap;
+}
+
+/* Main content */
+
+.about-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  align-items: center;
+  gap: clamp(28px, 4vw, 64px);
+  padding-top: 42px;
+}
+
+.about-content {
+  min-width: 0;
+}
+
+.about-eyebrow {
+  margin: 0 0 18px;
+  color: #00A8FF;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+
+/* Heading: silver white and cool grey */
+
+.about-heading {
+  margin: 0 0 25px;
+  color: #DDE8F7;
+  font-family: var(--font-bebas-neue), sans-serif;
+  font-size: clamp(48px, 5vw, 76px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.3px;
+}
+
+.about-heading span {
+  color: #C5D0DF;
+}
+
+/* Body copy: soft white-grey, no zinc */
+
+.about-copy {
+  display: grid;
+  gap: 13px;
+  max-width: 700px;
+  color: #B8C4D3;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.about-copy p {
+  margin: 0;
+}
+
+.about-copy strong {
+  color: #DDE8F7;
+  font-weight: 700;
+}
+
+.about-copy .about-highlight {
+  color: #FFC247;
+}
+
+/* Closing statement */
+
+.about-quote {
+  margin: 22px 0 0;
+  padding: 5px 0 5px 15px;
+  border-left: 2px solid #FFC247;
+  color: #C5D0DF;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 15px;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.about-quote span {
+  color: #FFC247;
+  font-weight: 700;
+}
+
+/* Portrait: no card, no added background */
+
+.about-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  align-self: stretch;
+}
+
+.about-portrait {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 650px;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Bottom role strip */
+
+.about-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(148, 166, 189, 0.22);
+}
+
+.about-roles {
+  display: grid;
+  flex: 1;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.about-role {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  min-width: 0;
+  padding: 0 15px;
+  border-right: 1px solid rgba(148, 166, 189, 0.2);
+}
+
+.about-role:first-child {
+  padding-left: 0;
+}
+
+.about-role:last-child {
+  border-right: none;
+}
+
+.about-role-dot {
+  flex: 0 0 6px;
+  width: 6px;
+  height: 6px;
+  margin-top: 5px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.about-role-blue {
+  color: #00A8FF;
+}
+
+.about-role-gold {
+  color: #FFC247;
+}
+
+.about-role-silver {
+  color: #DDE8F7;
+}
+
+.about-role-red {
+  color: #FF3038;
+}
+
+.about-role h3 {
+  margin: 0 0 6px;
+  color: currentColor;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.about-role p {
+  margin: 0;
+  color: #B8C4D3;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+/* CTA */
+
+.about-cta {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  min-height: 46px;
+  padding: 0 15px;
+  border: 1px solid rgba(255, 194, 71, 0.75);
+  border-radius: 3px;
+  color: #FFC247;
+  background: transparent;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition:
+    color 200ms ease,
+    background-color 200ms ease,
+    border-color 200ms ease;
+}
+
+.about-cta span {
+  font-size: 18px;
+  transition: transform 200ms ease;
+}
+
+.about-cta:hover {
+  color: #050912;
+  background: #FFC247;
+  border-color: #FFC247;
+}
+
+.about-cta:hover span {
+  transform: translate(2px, -2px);
+}
+
+.about-cta:focus-visible {
+  outline: 2px solid #00A8FF;
+  outline-offset: 4px;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (min-width: 769px) and (max-width: 1100px) {
+  .about-section {
+    padding: 60px 3% 48px;
+  }
+
+  .about-main {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+    gap: 24px;
+  }
+
+  .about-heading {
+    font-size: clamp(43px, 5vw, 58px);
+  }
+
+  .about-copy {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .about-quote {
+    font-size: 13px;
+  }
+
+  /* Keep role cards and CTA on the same row */
+  .about-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .about-roles {
+    display: grid;
+    flex: 1 1 0;
+    min-width: 0;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .about-role {
+    gap: 6px;
+    padding-inline: 8px;
+  }
+
+  .about-role h3 {
+    font-size: 9px;
+  }
+
+  .about-role p {
+    font-size: 9px;
+  }
+
+  .about-cta {
+    flex: 0 0 auto;
+    width: auto;
+    min-height: 42px;
+    padding-inline: 10px;
+    gap: 8px;
+    white-space: nowrap;
+    font-size: 9px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 48px 22px 38px;
+  }
+
+  .about-main {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+    padding-top: 30px;
+  }
+
+  .about-eyebrow {
+    margin-bottom: 15px;
+    font-size: 10px;
+  }
+
+  .about-heading {
+    margin-bottom: 21px;
+    font-size: clamp(45px, 10.5vw, 68px);
+    line-height: 0.98;
+  }
+
+  .about-copy {
+    gap: 12px;
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .about-quote {
+    margin-top: 19px;
+    font-size: 13px;
+  }
+
+  .about-visual {
+    width: 100%;
+  }
+
+  .about-portrait {
+    width: 100%;
+    max-height: none;
+  }
+
+  .about-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    min-width: 0;
+    margin-top: 24px;
+    padding-top: 22px;
+    gap: 23px;
+  }
+
+  .about-roles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 21px;
+  }
+
+  .about-role {
+    padding: 0 10px;
+    border-right: none;
+  }
+
+  .about-role:nth-child(odd) {
+    padding-left: 0;
+    border-right: 1px solid rgba(148, 166, 189, 0.2);
+  }
+
+  .about-role:nth-child(even) {
+    padding-right: 0;
+  }
+
+  .about-role h3 {
+    font-size: 10px;
+  }
+
+  .about-role p {
+    font-size: 9px;
+  }
+
+  .about-cta {
+    display: inline-flex;
+    box-sizing: border-box;
+    align-self: auto;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    min-height: 47px;
+    padding: 0 15px;
+    justify-content: space-between;
+    gap: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+
+    color: #FFC247;
+    background: transparent;
+    border: 1px solid rgba(255, 194, 71, 0.75);
+
+    font-size: 10px;
+  }
+}
+
+/* Small phones */
+
+@media (max-width: 380px) {
+  .about-section {
+    padding-inline: 16px;
+  }
+
+  .about-topline {
+    font-size: 9px;
+  }
+
+  .about-heading {
+    font-size: 41px;
+  }
+
+  .about-copy {
+    font-size: 11px;
+  }
+
+  .about-role {
+    gap: 7px;
+  }
+
+  .about-role h3 {
+    font-size: 9px;
+  }
+
+  .about-role p {
+    font-size: 8px;
+  }
+
+  .about-cta {
+    padding-inline: 12px;
+    font-size: 9px;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .about-cta,
+  .about-cta span {
+    transition: none;
+  }
+}

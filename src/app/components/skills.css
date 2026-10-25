@@ -1,0 +1,296 @@
+
+/* ========================================
+   SKILLS — THE SAI STORY
+   Transparent background; inherits site BG
+======================================== */
+
+.skills-section {
+  width: 100%;
+  padding: 72px 0 64px;
+  color: #DDE8F7;
+  background: transparent;
+  overflow: hidden;
+}
+
+.skills-container {
+  width: 90%;
+  max-width: 1700px;
+  margin: 0 auto;
+}
+
+/* Section label */
+
+.skills-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(148, 166, 189, 0.22);
+  color: #94A6BD;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+
+.skills-topline > span:first-child > span {
+  color: #00A8FF;
+}
+
+.skills-label {
+  white-space: nowrap;
+}
+
+/* Heading */
+
+.skills-heading {
+  padding-top: 36px;
+}
+
+.skills-eyebrow {
+  margin: 0 0 12px;
+  color: #00A8FF;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+
+.skills-heading h2 {
+  margin: 0;
+  color: #DDE8F7;
+  font-family: var(--font-bebas-neue), sans-serif;
+  font-size: clamp(48px, 5vw, 76px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.3px;
+}
+
+.skills-heading h2 span {
+  color: #FFC247;
+}
+
+.skills-description {
+  margin: 16px 0 0;
+  color: #B8C4D3;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* Infinite horizontal scrolling */
+
+.skills-marquee {
+  width: 100%;
+  margin-top: 42px;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 5%,
+    #000 95%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 5%,
+    #000 95%,
+    transparent
+  );
+}
+
+.skills-track {
+  display: flex;
+  width: max-content;
+  animation: skills-scroll 42s linear infinite;
+  will-change: transform;
+}
+
+.skill-item {
+  display: flex;
+  flex: 0 0 132px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  padding: 20px 12px;
+  text-align: center;
+}
+
+.skill-logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 76px;
+  height: 76px;
+  padding: 17px;
+  border: 1px solid rgba(148, 166, 189, 0.2);
+  border-radius: 8px;
+  background: rgba(10, 17, 31, 0.55);
+  transition:
+    border-color 200ms ease,
+    background-color 200ms ease,
+    transform 200ms ease;
+}
+
+.skill-logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.skill-name {
+  color: #C5D0DF;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.5;
+  white-space: nowrap;
+  transition: color 200ms ease;
+}
+
+.skill-item:hover .skill-logo-wrap {
+  border-color: rgba(0, 168, 255, 0.65);
+  background: rgba(0, 168, 255, 0.06);
+  transform: translateY(-4px);
+}
+
+.skill-item:hover .skill-name {
+  color: #DDE8F7;
+}
+
+/* One full set = exactly half of the duplicated track */
+
+@keyframes skills-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause on desktop hover */
+
+@media (hover: hover) and (pointer: fine) {
+  .skills-marquee:hover .skills-track {
+    animation-play-state: paused;
+  }
+}
+
+/* Tablet */
+
+@media (max-width: 1100px) {
+  .skills-section {
+    padding: 60px 0 48px;
+  }
+
+  .skills-heading {
+    padding-top: 30px;
+  }
+
+  .skills-heading h2 {
+    font-size: clamp(43px, 5vw, 58px);
+  }
+
+  .skills-marquee {
+    margin-top: 32px;
+  }
+
+  .skill-item {
+    flex-basis: 118px;
+  }
+
+  .skill-logo-wrap {
+    width: 68px;
+    height: 68px;
+    padding: 15px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 48px 0 38px;
+  }
+
+  .skills-container {
+    width: auto;
+    margin-inline: 22px;
+  }
+
+  .skills-topline {
+    font-size: 9px;
+  }
+
+  .skills-heading {
+    padding-top: 28px;
+  }
+
+  .skills-eyebrow {
+    font-size: 10px;
+  }
+
+  .skills-heading h2 {
+    font-size: clamp(45px, 10.5vw, 68px);
+  }
+
+  .skills-description {
+    margin-top: 12px;
+    font-size: 12px;
+  }
+
+  .skills-marquee {
+    margin-top: 26px;
+  }
+
+  .skills-track {
+    animation-duration: 34s;
+  }
+
+  .skill-item {
+    flex-basis: 104px;
+    gap: 12px;
+    padding: 16px 10px;
+  }
+
+  .skill-logo-wrap {
+    width: 60px;
+    height: 60px;
+    padding: 13px;
+  }
+
+  .skill-name {
+    font-size: 10px;
+  }
+}
+
+/* Small phones */
+
+@media (max-width: 380px) {
+  .skills-container {
+    margin-inline: 16px;
+  }
+
+  .skills-heading h2 {
+    font-size: 41px;
+  }
+
+  .skill-item {
+    flex-basis: 96px;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .skills-track {
+    animation: none;
+    transform: none;
+  }
+}

@@ -211,24 +211,27 @@ h6 {
 
 .main-website {
   position: relative;
+  isolation: isolate;
   width: 100%;
   min-height: 100vh;
   min-height: 100dvh;
-  overflow: hidden;
-  background-color: #030711;
-  background-image: url("/assets/main-background.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  isolation: isolate;
+  overflow: clip;
+  background: transparent;
 }
 
 .main-website::before {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
   content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("/assets/main-background.png") center / cover no-repeat;
 }
 
 /* =========================================

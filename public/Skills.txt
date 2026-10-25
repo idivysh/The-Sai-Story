@@ -1,0 +1,93 @@
+Skills inventory for The Sai Story
+
+1. Programming Languages
+- Python
+- Java
+- JavaScript
+- TypeScript
+- SQL
+- HTML / HTML5
+- CSS / CSS3
+
+2. Web Development
+- React
+- Next.js
+- Node.js
+- FastAPI
+- Tailwind CSS
+- Material UI
+- shadcn/ui
+
+3. App Development
+- React Native
+- Expo
+- Android Studio
+
+4. AI & Machine Learning
+- TensorFlow
+- PyTorch
+- Scikit-learn
+- OpenCV
+
+5. Data Science & Analytics
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Jupyter Notebook
+- Power BI
+
+6. Graphic Design Software
+- Adobe Photoshop
+- Adobe Illustrator
+- Adobe InDesign
+- CorelDRAW
+- Canva
+
+7. Video Editing Software
+- Adobe Premiere Pro
+- Adobe After Effects
+- CapCut
+
+8. Databases & Backend Services
+- MySQL
+- MongoDB
+- Firebase Firestore
+- Firebase Realtime Database
+- Firebase Authentication
+- Supabase
+- Prisma ORM — relevant to your Next.js and PostgreSQL project work
+- PostgreSQL — relevant to your preferred portfolio stack
+
+9. Developer Tools
+- Git
+- GitHub
+- VS Code
+- Visual Studio
+- Postman
+- npm
+- Yarn
+- pnpm
+- PowerShell
+- Bash
+
+10. Cloud & Deployment Platforms
+- Vercel
+- Netlify
+- Hostinger
+- GoDaddy
+- Firebase Hosting
+
+11. Blockchain Technologies
+- Ganache
+- Web3.js
+- Ethers.js
+
+12. Office & Productivity Software
+- Microsoft Word
+- Microsoft Excel
+- Microsoft PowerPoint
+- Google Docs
+- Google Sheets
+- Google Slides
+- Notion
