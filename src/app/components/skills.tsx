@@ -33,12 +33,16 @@ export default function Skills() {
 
   return (
     <section className="skills-section" id="skills">
+      <div className="skills-side-label" aria-label="The Sai Story — My Skills">
+        <span>THE SAI STORY</span>
+        <span className="skills-side-line" />
+        <span>MY EXPERTISE</span>
+      </div>
       <div className="skills-container">
         <div className="skills-topline">
           <span>
             02 / <span>SKILLS</span>
           </span>
-          <span className="skills-label">WHAT I WORK WITH</span>
         </div>
 
         <div className="skills-heading">

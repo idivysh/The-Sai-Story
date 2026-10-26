@@ -15,7 +15,7 @@ export default function Hero() {
           <h1 className="hero-title">
             Hi, I&apos;m Divyamsh
             <br />
-            <span>Sai Vengala.</span>
+            <span>Sai Vengala</span><span className="hero-title-dot">.</span>
           </h1>
 
           <h2 className="hero-tagline">

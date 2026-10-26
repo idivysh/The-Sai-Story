@@ -43,7 +43,7 @@
 
 .hero-eyebrow {
   margin: 0 0 24px;
-  color: #94A6BD;
+  color: #00A8FF;
   font-family: var(--font-manrope), sans-serif;
   font-size: 11px;
   font-weight: 700;
@@ -67,6 +67,10 @@
 
 .hero-title span {
   color: #C5D0DF;
+}
+
+.hero-title .hero-title-dot{
+  color: #FFC247;
 }
 
 .hero-tagline {
@@ -183,30 +187,37 @@
     transform 220ms ease;
 }
 
-/* Primary button — silver-white */
+/* Primary CTA — Gold */
 
 .hero-button-primary {
   color: #050912;
-  background: #DDE8F7;
+  background: #00A8FF;
+  border-color: #00A8FF;
 }
 
 .hero-button-primary:hover {
   color: #050912;
-  background: #FFFFFF;
+  background: #FFC247;
+  border-color: #FFC247;
   transform: translateY(-2px);
 }
 
-/* Secondary button — cool grey */
+/* Secondary CTA — Electric Blue Outline with Glow */
 
 .hero-button-secondary {
-  color: #C5D0DF;
+  color: #00A8FF;
   background: transparent;
-  border-color: #344154;
+  border-color: #00A8FF;
+  box-shadow: 0 0 0 rgba(0, 168, 255, 0);
 }
 
 .hero-button-secondary:hover {
-  color: #DDE8F7;
-  border-color: #94A6BD;
+  color: #FFC247;
+  background: transparent;
+  border-color: #FFC247;
+  box-shadow:
+    0 0 8px rgba(255, 194, 71, 0.35),
+    0 0 20px rgba(255, 194, 71, 0.18);
   transform: translateY(-2px);
 }
 

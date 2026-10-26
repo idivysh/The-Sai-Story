@@ -31,12 +31,16 @@ const roles = [
 export default function About() {
   return (
     <section className="about-section" id="about">
+      <div className="about-side-label" aria-label="The Sai Story — About Me">
+        <span>THE SAI STORY</span>
+        <span className="about-side-line" />
+        <span>THE CREATOR</span>
+      </div>
       <div className="about-container">
         <div className="about-topline">
           <span>
             01 / <span>ABOUT ME</span>
           </span>
-          <span className="about-brand">THE SAI STORY</span>
         </div>
 
         <div className="about-main">

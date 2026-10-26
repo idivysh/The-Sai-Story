@@ -38,8 +38,36 @@
   color: #00A8FF;
 }
 
-.skills-label {
-  white-space: nowrap;
+/* Right-side vertical section label */
+
+.skills-section {
+  position: relative;
+}
+
+.skills-side-label {
+  position: absolute;
+  top: 88px;
+  right: 2%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #94A6BD;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  writing-mode: vertical-rl;
+  text-transform: uppercase;
+}
+
+.skills-side-line {
+  width: 1px;
+  height: 44px;
+  background: linear-gradient(
+    to bottom,
+    #00A8FF,
+    rgba(0, 168, 255, 0.1)
+  );
 }
 
 /* Heading */
@@ -292,5 +320,69 @@
   .skills-track {
     animation: none;
     transform: none;
+  }
+}
+
+
+/* ========================================
+   RESPONSIVE VERTICAL SIDE LABEL
+======================================== */
+
+.skills-side-label {
+  z-index: 5;
+  right: 12px;
+  gap: 10px;
+  font-size: 9px;
+}
+
+.skills-side-line {
+  flex-shrink: 0;
+}
+
+@media (max-width: 1100px) {
+  .skills-side-label {
+    right: 8px;
+    font-size: 8px;
+    letter-spacing: 1.5px;
+    gap: 8px;
+  }
+
+  .skills-side-line {
+    height: 34px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-section {
+    padding-right: 38px;
+  }
+
+  .skills-side-label {
+    top: 78px;
+    right: 8px;
+    font-size: 7px;
+    letter-spacing: 1px;
+    gap: 6px;
+  }
+
+  .skills-side-line {
+    height: 26px;
+  }
+}
+
+@media (max-width: 380px) {
+  .skills-section {
+    padding-right: 34px;
+  }
+
+  .skills-side-label {
+    right: 5px;
+    font-size: 6px;
+    letter-spacing: 0.7px;
+    gap: 5px;
+  }
+
+  .skills-side-line {
+    height: 22px;
   }
 }
