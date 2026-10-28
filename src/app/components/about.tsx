@@ -52,7 +52,7 @@ export default function About() {
             <h2 className="about-heading">
               TECHNOLOGY
               <br />
-              <span>MEETS CREATIVITY.</span>
+              <span>MEETS CREATIVITY</span><span className="about-dot">.</span>
             </h2>
 
             <div className="about-copy">

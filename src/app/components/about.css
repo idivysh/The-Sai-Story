@@ -113,6 +113,10 @@
   color: #C5D0DF;
 }
 
+.about-heading .about-dot {
+  color: #FFC247;
+}
+
 /* Body copy: soft white-grey, no zinc */
 
 .about-copy {

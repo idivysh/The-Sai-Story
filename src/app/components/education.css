@@ -1,0 +1,529 @@
+
+/* ========================================
+   EDUCATION — THE SAI STORY
+======================================== */
+
+.education-section {
+  position: relative;
+  width: 100%;
+  padding: 72px 5% 76px;
+  color: #DDE8F7;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+.education-section *,
+.education-section *::before,
+.education-section *::after {
+  box-sizing: border-box;
+}
+
+.education-container {
+  width: 100%;
+  max-width: 1700px;
+  margin: 0 auto;
+}
+
+/* Topline */
+
+.education-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid rgba(148, 166, 189, 0.22);
+  color: #94A6BD;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+
+.education-topline > span:first-child > span {
+  color: #00A8FF;
+}
+
+.education-topline-caption {
+  font-size: 9px;
+  letter-spacing: 0.16em;
+}
+
+/* Vertical side label */
+
+.education-side-label {
+  position: absolute;
+  top: 115px;
+  right: 2%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #94A6BD;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  writing-mode: vertical-rl;
+  text-transform: uppercase;
+}
+
+.education-side-line {
+  flex-shrink: 0;
+  width: 1px;
+  height: 44px;
+  background: linear-gradient(
+    to bottom,
+    #00A8FF,
+    rgba(0, 168, 255, 0.1)
+  );
+}
+
+/* Heading */
+
+.education-heading {
+  max-width: 850px;
+  margin: 44px 0 46px;
+}
+
+.education-eyebrow {
+  margin: 0 0 13px;
+  color: #00A8FF;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.education-heading h2 {
+  margin: 0;
+  color: #DDE8F7;
+  font-family: var(--font-bebas-neue), sans-serif;
+  font-size: clamp(48px, 5.3vw, 78px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+}
+
+.education-heading h2 span {
+  color: #FFC247;
+}
+
+.education-intro {
+  max-width: 580px;
+  margin: 19px 0 0;
+  color: #B8C4D3;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* Education cards */
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.education-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 36px 76px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 22px;
+  min-width: 0;
+  padding: 27px 30px;
+  overflow: hidden;
+  border: 1px solid rgba(148, 166, 189, 0.23);
+  border-radius: 9px;
+  background: rgba(5, 9, 18, 0.12);
+  transition:
+    border-color 280ms ease,
+    transform 280ms ease,
+    background-color 280ms ease;
+  opacity: 0;
+  transform: translateY(22px);
+}
+
+.education-visible .education-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.education-visible .education-card:nth-child(2) {
+  transition-delay: 100ms;
+}
+
+.education-visible .education-card:nth-child(3) {
+  transition-delay: 200ms;
+}
+
+.education-card:hover {
+  border-color: rgba(0, 168, 255, 0.62);
+  background: rgba(0, 168, 255, 0.035);
+  transform: translateY(-3px);
+}
+
+/* Featured degree */
+
+.education-card-featured {
+  border-color: rgba(0, 168, 255, 0.4);
+}
+
+.education-card-accent {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    #00A8FF,
+    rgba(0, 168, 255, 0.08)
+  );
+  opacity: 0.65;
+  transition: opacity 250ms ease;
+}
+
+.education-card:hover .education-card-accent {
+  opacity: 1;
+}
+
+.education-card-number {
+  align-self: start;
+  padding-top: 5px;
+  color: #FFC247;
+  font-family: var(--font-bebas-neue), sans-serif;
+  font-size: 23px;
+  line-height: 1;
+}
+
+/* Institution logo / mark */
+
+.education-institution-mark {
+  display: grid;
+  width: 76px;
+  height: 76px;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(148, 166, 189, 0.25);
+  border-radius: 8px;
+  background: rgba(148, 166, 189, 0.07);
+}
+
+.education-logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  object-fit: contain;
+}
+
+.education-mark-fallback {
+  color: #00A8FF;
+  font-family: var(--font-bebas-neue), sans-serif;
+  font-size: 32px;
+  line-height: 1;
+}
+
+/* Card information */
+
+.education-card-content {
+  min-width: 0;
+}
+
+.education-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 18px;
+  margin-bottom: 9px;
+}
+
+.education-level {
+  color: #00A8FF;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.education-dates {
+  color: #94A6BD;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.education-card-content h3 {
+  margin: 0;
+  color: #DDE8F7;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: clamp(17px, 1.7vw, 22px);
+  font-weight: 750;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.education-qualification {
+  margin: 7px 0 0;
+  color: #B8C4D3;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 12px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.education-specialization {
+  margin: 4px 0 0;
+  color: #94A6BD;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* Grade */
+
+.education-grade {
+  min-width: 112px;
+  padding-left: 24px;
+  border-left: 1px solid rgba(148, 166, 189, 0.23);
+}
+
+.education-grade-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #94A6BD;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1.1px;
+}
+
+.education-grade-value {
+  color: #FFC247;
+  font-family: var(--font-bebas-neue), sans-serif;
+  font-size: clamp(31px, 3.1vw, 43px);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.education-grade-value span {
+  margin-left: 5px;
+  color: #DDE8F7;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* Footer */
+
+.education-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px 0 0;
+}
+
+.education-footer-dot {
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #FFC247;
+  box-shadow: 0 0 10px rgba(255, 194, 71, 0.3);
+}
+
+.education-footer p {
+  margin: 0;
+  color: #94A6BD;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* Tablet */
+
+@media (max-width: 1100px) {
+  .education-section {
+    padding: 60px 5% 60px;
+  }
+
+  .education-side-label {
+    right: 12px;
+    gap: 8px;
+    font-size: 8px;
+    letter-spacing: 1.5px;
+  }
+
+  .education-side-line {
+    height: 34px;
+  }
+
+  .education-heading {
+    margin: 36px 0;
+  }
+
+  .education-card {
+    grid-template-columns: 27px 60px minmax(0, 1fr) auto;
+    gap: 16px;
+    padding: 23px 22px;
+  }
+
+  .education-institution-mark {
+    width: 60px;
+    height: 60px;
+  }
+
+  .education-grade {
+    min-width: 96px;
+    padding-left: 16px;
+  }
+
+  .education-grade-value {
+    font-size: 34px;
+  }
+}
+
+/* Mobile */
+/* Mobile: align logo beside institution details */
+
+@media (max-width: 768px) {
+  .education-card {
+    grid-template-columns: 44px minmax(0, 1fr);
+    align-items: start;
+    gap: 12px;
+    padding: 18px 14px;
+  }
+
+  .education-card-number {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    padding: 0;
+    font-size: 18px;
+  }
+
+  .education-institution-mark {
+    grid-column: 1;
+    grid-row: 2;
+    width: 44px;
+    height: 44px;
+    border-radius: 7px;
+  }
+
+  .education-logo {
+    width: 100%;
+    height: 100%;
+    padding: 3px;
+    object-fit: contain;
+  }
+
+  .education-mark-fallback {
+    font-size: 20px;
+  }
+
+  .education-card-content {
+    grid-column: 2;
+    grid-row: 2;
+    min-width: 0;
+  }
+
+  .education-card-meta {
+    gap: 6px 10px;
+    margin-bottom: 7px;
+  }
+
+  .education-level {
+    font-size: 8px;
+    line-height: 1.5;
+  }
+
+  .education-dates {
+    font-size: 9px;
+  }
+
+  .education-card-content h3 {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .education-qualification {
+    font-size: 10px;
+    line-height: 1.7;
+  }
+
+  .education-specialization {
+    font-size: 10px;
+  }
+
+  .education-grade {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-width: 0;
+    margin-top: 8px;
+    padding: 12px 0 0;
+    border-top: 1px solid rgba(148, 166, 189, 0.2);
+    border-left: 0;
+  }
+
+  .education-grade-label {
+    margin: 0;
+    font-size: 8px;
+  }
+
+  .education-grade-value {
+    font-size: 30px;
+  }
+}
+
+/* Extra-small phones */
+
+@media (max-width: 380px) {
+  .education-card {
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: 10px;
+    padding: 15px 11px;
+  }
+
+  .education-institution-mark {
+    width: 38px;
+    height: 38px;
+  }
+
+  .education-card-content h3 {
+    font-size: 14px;
+  }
+
+  .education-card-content {
+    overflow-wrap: anywhere;
+  }
+
+  .education-grade-value {
+    font-size: 27px;
+  }
+}
+
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .education-card {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
