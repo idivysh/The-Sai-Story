@@ -33,12 +33,12 @@ const footerGroups = [
   {
     title: "Connect",
     links: [
-      { label: "GitHub", href: "https://github.com/idivysh" },
+      { label: "GitHub", href: "https://github.com/idivysh/" },
       {
         label: "Instagram",
         href: "https://www.instagram.com/darling.diaries7/",
       },
-      { label: "LinkedIn", href: "https://www.linkedin.com/" },
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/idivysh" },
       { label: "Get in touch", href: "/contact" },
     ],
   },

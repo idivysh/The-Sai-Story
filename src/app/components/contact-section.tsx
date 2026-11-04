@@ -23,7 +23,7 @@ const contacts = [
   {
     name: "INSTAGRAM",
     icon: "/assets/contact/instagram.svg",
-    href: "https://www.instagram.com/divuuuuuu._.7/",
+    href: "https://www.instagram.com/darling.diaries7/",
     label: "FOLLOW MY JOURNEY",
     external: true,
   },
