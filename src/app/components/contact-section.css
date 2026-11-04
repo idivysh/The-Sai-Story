@@ -1,0 +1,613 @@
+
+/* ========================================
+   CONTACT — THE SAI STORY
+   Transparent background; inherits site BG
+======================================== */
+
+.contact-section {
+  position: relative;
+  width: 100%;
+  padding: 72px 5% 64px;
+  color: #DDE8F7;
+  background: transparent;
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 1700px;
+  margin: 0 auto;
+}
+
+/* ========================================
+   VERTICAL SIDE LABEL
+======================================== */
+
+.contact-side-label {
+  position: absolute;
+  z-index: 5;
+  top: 115px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #94A6BD;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  writing-mode: vertical-rl;
+  text-transform: uppercase;
+}
+
+.contact-side-line {
+  flex-shrink: 0;
+  width: 1px;
+  height: 44px;
+  background: linear-gradient(
+    to bottom,
+    #00A8FF,
+    rgba(0, 168, 255, 0.1)
+  );
+}
+
+/* ========================================
+   TOP LINE
+======================================== */
+
+.contact-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(148, 166, 189, 0.22);
+  color: #94A6BD;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+
+.contact-topline > span > span {
+  color: #00A8FF;
+}
+
+/* ========================================
+   MAIN LAYOUT
+======================================== */
+
+.contact-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  align-items: stretch;
+  gap: clamp(28px, 5vw, 75px);
+  padding-top: 48px;
+}
+
+.contact-content {
+  min-width: 0;
+}
+
+/* ========================================
+   EYEBROW & HEADING
+======================================== */
+
+.contact-eyebrow {
+  margin: 0 0 18px;
+  color: #00A8FF;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+
+.contact-heading {
+  margin: 0 0 22px;
+  color: #DDE8F7;
+  font-family: var(--font-bebas-neue), sans-serif;
+  font-size: clamp(46px, 5vw, 76px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.3px;
+}
+
+.contact-heading > span:first-of-type {
+  color: #C5D0DF;
+}
+
+.contact-heading .contact-dot {
+  color: #FFC247;
+}
+
+.contact-description {
+  max-width: 620px;
+  margin: 0 0 30px;
+  color: #B8C4D3;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+/* ========================================
+   CONTACT ICON GRID
+======================================== */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  row-gap: 38px;
+  margin-top: 35px;
+}
+
+.contact-item {
+  grid-column: span 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+
+  min-width: 0;
+  padding: 10px;
+
+  color: #00A8FF;
+  background: transparent;
+  text-decoration: none;
+
+  transition:
+    color 200ms ease,
+    transform 200ms ease;
+}
+
+/* Centre the second row */
+
+.contact-item-linkedin {
+  grid-column: 2 / span 2;
+}
+
+.contact-item-github {
+  grid-column: 4 / span 2;
+}
+
+
+/* Original full-colour SVG */
+
+.contact-icon {
+  display: block;
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+
+  transition:
+    transform 200ms ease,
+    filter 200ms ease;
+}
+
+/* Platform name */
+
+.contact-item-name {
+  color: #DDE8F7;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-align: center;
+
+  transition: color 200ms ease;
+}
+
+/* Hover */
+
+.contact-item:hover {
+  transform: translateY(-2px);
+}
+
+.contact-item:hover .contact-item-name {
+  color: #00A8FF;
+}
+
+.contact-item:hover .contact-icon {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 7px rgba(0, 168, 255, 0.4));
+}
+
+/* Keyboard accessibility */
+
+.contact-item:focus-visible {
+  outline: 2px solid #00A8FF;
+  outline-offset: 5px;
+  border-radius: 3px;
+}
+
+/* ========================================
+   CONTACT HOVER — GOLD GLOW
+======================================== */
+
+.contact-card:hover {
+  color: #FFC247;
+  background: transparent;
+  border-color: #FFC247;
+  box-shadow:
+    0 0 8px rgba(255, 194, 71, 0.35),
+    0 0 20px rgba(255, 194, 71, 0.18);
+  transform: translateY(-2px);
+}
+
+.contact-card:hover .contact-icon {
+  transform: scale(1.08);
+}
+
+.contact-card:hover .contact-card-arrow {
+  transform: translate(2px, -2px);
+}
+
+.contact-card:focus-visible,
+.contact-resume-button:focus-visible {
+  outline: 2px solid #00A8FF;
+  outline-offset: 4px;
+}
+
+/* ========================================
+   RESUME PANEL
+======================================== */
+
+.contact-resume {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  padding: clamp(24px, 3vw, 42px);
+  border: 1px solid rgba(148, 166, 189, 0.3);
+  border-radius: 3px;
+  background: rgba(5, 9, 18, 0.55);
+}
+
+.contact-resume-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(148, 166, 189, 0.22);
+}
+
+.contact-resume-top > span {
+  color: #00A8FF;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.contact-resume-icon {
+  object-fit: contain;
+  filter: brightness(0) saturate(100%)
+    invert(79%) sepia(54%) saturate(650%)
+    hue-rotate(350deg) brightness(103%);
+}
+
+.contact-resume-content {
+  padding: 35px 0;
+}
+
+.contact-resume-eyebrow {
+  margin: 0 0 14px;
+  color: #94A6BD;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.contact-resume-content h3 {
+  margin: 0 0 20px;
+  color: #DDE8F7;
+  font-family: var(--font-bebas-neue), sans-serif;
+  font-size: clamp(42px, 4.2vw, 62px);
+  font-weight: 400;
+  line-height: 0.98;
+}
+
+.contact-resume-content h3 span {
+  color: #FFC247;
+}
+
+.contact-resume-description {
+  max-width: 430px;
+  margin: 0;
+  color: #B8C4D3;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+/* Resume bottom */
+
+.contact-resume-bottom {
+  padding-top: 22px;
+  border-top: 1px solid rgba(148, 166, 189, 0.22);
+}
+
+.contact-resume-meta {
+  margin-bottom: 17px;
+}
+
+.contact-resume-meta > span {
+  color: #DDE8F7;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.contact-resume-meta p {
+  margin: 6px 0 0;
+  color: #94A6BD;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+/* ========================================
+   RESUME BUTTON
+======================================== */
+
+.contact-resume-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 49px;
+  padding: 0 45px;
+  border: 1px solid #00A8FF;
+  border-radius: 3px;
+  color: #00A8FF;
+  background: transparent;
+  box-shadow: 0 0 0 rgba(0, 168, 255, 0);
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    color 200ms ease,
+    border-color 200ms ease,
+    box-shadow 200ms ease,
+    transform 200ms ease;
+}
+
+
+
+.contact-resume-button:hover {
+  color: #FFC247;
+  background: transparent;
+  border-color: #FFC247;
+  box-shadow:
+    0 0 8px rgba(255, 194, 71, 0.35),
+    0 0 20px rgba(255, 194, 71, 0.18);
+  transform: translateY(-2px);
+}
+
+
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (min-width: 769px) and (max-width: 1100px) {
+  .contact-section {
+    padding: 60px 3% 48px;
+  }
+
+  .contact-main {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: 25px;
+  }
+
+  .contact-heading {
+    font-size: clamp(43px, 5vw, 58px);
+  }
+
+  .contact-description {
+    font-size: 12px;
+  }
+
+  .contact-grid {
+    gap: 10px;
+  }
+
+  .contact-card {
+    min-height: 125px;
+    padding: 14px;
+  }
+
+  .contact-resume {
+    padding: 24px;
+  }
+
+  .contact-resume-content h3 {
+    font-size: clamp(40px, 4.5vw, 52px);
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 48px 38px 38px 22px;
+  }
+
+  .contact-main {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+    padding-top: 30px;
+  }
+
+  .contact-eyebrow {
+    margin-bottom: 15px;
+    font-size: 10px;
+  }
+
+  .contact-heading {
+    margin-bottom: 19px;
+    font-size: clamp(43px, 10vw, 65px);
+    line-height: 0.98;
+  }
+
+  .contact-description {
+    margin-bottom: 24px;
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .contact-grid {
+    gap: 10px;
+  }
+
+  .contact-card {
+    min-height: 125px;
+    padding: 14px;
+  }
+
+  .contact-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .contact-card-info h3 {
+    font-size: 10px;
+  }
+
+  .contact-card-info p {
+    font-size: 8px;
+  }
+
+  .contact-resume {
+    padding: 24px;
+  }
+
+  .contact-resume-content {
+    padding: 29px 0;
+  }
+
+  .contact-resume-content h3 {
+    font-size: clamp(43px, 10vw, 60px);
+  }
+
+  .contact-resume-description {
+    font-size: 12px;
+  }
+
+  .contact-side-label {
+    top: 105px;
+    right: 8px;
+    font-size: 7px;
+    letter-spacing: 1px;
+    gap: 6px;
+  }
+
+  .contact-side-line {
+    height: 26px;
+  }
+}
+
+/* ========================================
+   SMALL PHONES
+======================================== */
+
+@media (max-width: 380px) {
+  .contact-section {
+    padding: 48px 34px 35px 16px;
+  }
+
+  .contact-topline {
+    font-size: 9px;
+  }
+
+  .contact-heading {
+    font-size: 40px;
+  }
+
+  .contact-description {
+    font-size: 11px;
+  }
+
+  .contact-grid {
+    gap: 8px;
+  }
+
+  .contact-card {
+    min-height: 112px;
+    padding: 11px;
+  }
+
+  .contact-card-info h3 {
+    font-size: 9px;
+  }
+
+  .contact-card-info p {
+    font-size: 7px;
+  }
+
+  .contact-resume {
+    padding: 19px;
+  }
+
+  .contact-resume-content h3 {
+    font-size: 40px;
+  }
+
+  .contact-resume-description {
+    font-size: 11px;
+  }
+
+  .contact-resume-button {
+    padding-inline: 12px;
+    font-size: 9px;
+  }
+
+  .contact-side-label {
+    right: 5px;
+    font-size: 6px;
+    letter-spacing: 0.7px;
+    gap: 5px;
+  }
+
+  .contact-side-line {
+    height: 22px;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-card,
+  .contact-card-arrow,
+  .contact-icon,
+  .contact-resume-button,
+  .contact-download-arrow {
+    transition: none;
+  }
+}
+
+/* ========================================
+   GITHUB ICON — WHITE
+======================================== */
+
+.contact-item-github .contact-icon {
+  filter: brightness(0) invert(1);
+}
+
+.contact-item-github:hover .contact-icon {
+  filter: brightness(0) invert(1)
+    drop-shadow(0 0 7px rgba(255, 194, 71, 0.4));
+}
