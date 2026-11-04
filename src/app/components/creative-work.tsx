@@ -12,6 +12,7 @@ type CreativeProject = {
   year: string;
   deliverables: string;
   image: string;
+  mobileImage: string;
   alt: string;
   href: string;
   external?: boolean;
@@ -25,6 +26,7 @@ const creativeProjects: CreativeProject[] = [
     year: "2026",
     deliverables: "LOGO DESIGN · VISUAL IDENTITY · BRAND GUIDELINES",
     image: "/assets/creative-work/avenlo-circuit-cover.png",
+    mobileImage: "/assets/creative-work/avenlo-circuit-cover-mobile.png",
     alt: "Avenlo Circuit logo and brand identity presentation",
     href: "/creative-work/avenlo-circuit",
   },
@@ -35,6 +37,7 @@ const creativeProjects: CreativeProject[] = [
     year: "2026",
     deliverables: "LOGO DESIGN · PACKAGING DESIGN · BRAND IDENTITY",
     image: "/assets/creative-work/bramble-cup-cover.png",
+    mobileImage: "/assets/creative-work/bramble-cup-cover-mobile.png",
     alt: "Bramble Cup specialty coffee branding and packaging",
     href: "/creative-work/bramble-cup",
   },
@@ -45,6 +48,7 @@ const creativeProjects: CreativeProject[] = [
     year: "2026",
     deliverables: "YOUTUBE THUMBNAILS · CHANNEL BANNER DESIGN",
     image: "/assets/creative-work/rasoi-reel-cover.png",
+    mobileImage: "/assets/creative-work/rasoi-reel-cover-mobile.png",
     alt: "Rasoi Reel food content thumbnails and channel branding",
     href: "/creative-work/rasoi-reel",
   },
@@ -55,6 +59,7 @@ const creativeProjects: CreativeProject[] = [
     year: "2026",
     deliverables: "BRAND IDENTITY · DESKTOP UI DESIGN · MOBILE UI DESIGN",
     image: "/assets/creative-work/nova-desk-cover.png",
+    mobileImage: "/assets/creative-work/nova-desk-cover-mobile.png",
     alt: "Nova Desk UI UX design project presentation",
     href: "https://www.figma.com/design/c5Weszqe84Q8le0iCBddVL/Noven-Desk-%E2%80%94-UI-UX-Design?node-id=0-1&t=cADRno5ySVx2x5e2-1",
     external: true,
@@ -247,14 +252,21 @@ export default function CreativeWork() {
                   aria-label={`View ${project.name} project`}
                 >
 
-                  <Image
-                    src={project.image}
-                    alt={project.alt}
-                    fill
-                    priority={index === 0}
-                    sizes="88vw"
-                    className="cw-project-cover"
-                  />
+                  <picture className="cw-project-picture">
+                    <source
+                      media="(max-width: 600px)"
+                      srcSet={project.mobileImage}
+                    />
+
+                    <Image
+                      src={project.image}
+                      alt={project.alt}
+                      fill
+                      priority={index === 0}
+                      sizes="(max-width: 600px) 90vw, 88vw"
+                      className="cw-project-cover"
+                    />
+                  </picture>
 
                   <span className="cw-image-index">
                     0{index + 1} / 04

@@ -22,6 +22,7 @@ const skills = [
   { name: "InDesign", logo: "/assets/skills/adobe-indesign.svg" },
   { name: "CorelDRAW", logo: "/assets/skills/coreldraw.svg" },
   { name: "Canva", logo: "/assets/skills/canva.svg" },
+  { name: "Figma", logo: "/assets/skills/figma.svg" },
   { name: "Premiere Pro", logo: "/assets/skills/adobe-premiere-pro.svg" },
   { name: "After Effects", logo: "/assets/skills/adobe-after-effects.svg" },
 ];

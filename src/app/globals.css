@@ -1035,3 +1035,39 @@ h6 {
 .site-content > main {
   flex: 1;
 }
+
+
+/* =========================================
+   RESPONSIVE FIXED WEBSITE BACKGROUND
+========================================= */
+
+/* Mobile background */
+@media (max-width: 600px) {
+  .main-website::before {
+    background:
+      linear-gradient(
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.6)
+      ),
+      url("/assets/mobile-background.png") center / cover no-repeat;
+  }
+}
+
+/* =========================================
+   MOBILE SPLASH BACKGROUND
+========================================= */
+
+@media (max-width: 600px) {
+  .splash-screen {
+    background-image:
+      linear-gradient(
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.6)
+      ),
+      url("/assets/mobile-splash-background.png");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
