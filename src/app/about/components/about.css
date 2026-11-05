@@ -1,0 +1,277 @@
+/* ========================================
+   ABOUT — SECTION 01: INTRODUCTION
+======================================== */
+
+.about-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 115px 5% 75px;
+  color: #DDE8F7;
+  background: transparent;
+}
+
+.about-container {
+  width: 100%;
+  max-width: 1700px;
+  margin: 0 auto;
+}
+
+/* ========================================
+   VERTICAL SIDE LABEL
+======================================== */
+
+.about-side-label {
+  position: absolute;
+  top: 145px;
+  right: 2%;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: #94A6BD;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  writing-mode: vertical-rl;
+  text-transform: uppercase;
+}
+
+.about-side-line {
+  flex-shrink: 0;
+  width: 1px;
+  height: 44px;
+  background: linear-gradient(
+    to bottom,
+    #00A8FF,
+    rgba(0, 168, 255, 0.1)
+  );
+}
+
+/* ========================================
+   MAIN INTRODUCTION LAYOUT
+======================================== */
+
+.about-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  align-items: center;
+  gap: clamp(35px, 5vw, 75px);
+  width: 100%;
+  padding-top: 25px;
+}
+
+.about-content {
+  min-width: 0;
+}
+
+/* Eyebrow */
+
+.about-eyebrow {
+  margin: 0 0 22px;
+  color: #00A8FF;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  line-height: 1.8;
+}
+
+
+/* Main heading */
+
+.about-heading {
+  margin: 0 0 30px;
+  color: #DDE8F7;
+  font-family: var(--font-bebas-neue), sans-serif;
+  font-size: clamp(58px, 6.5vw, 100px);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: 0.005em;
+}
+
+.about-heading > span:first-of-type {
+  color: #C5D0DF;
+}
+
+.about-heading .about-dot {
+  color: #FFC247;
+}
+
+/* Introduction copy */
+
+.about-copy {
+  display: grid;
+  gap: 17px;
+  max-width: 700px;
+
+  color: #B8C4D3;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 14px;
+  line-height: 1.95;
+}
+
+.about-copy p {
+  margin: 0;
+}
+
+.about-copy strong {
+  color: #DDE8F7;
+  font-weight: 700;
+}
+
+.about-copy .about-highlight {
+  color: #FFC247;
+}
+
+/* ========================================
+   PERSONAL PORTRAIT
+======================================== */
+
+.about-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  height: 100%;
+}
+
+.about-myimage {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 700px;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (min-width: 769px) and (max-width: 1100px) {
+  .about-section {
+    padding: 110px 4% 60px;
+  }
+
+  .about-main {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+    gap: 28px;
+  }
+
+  .about-heading {
+    font-size: clamp(55px, 6.5vw, 75px);
+  }
+
+  .about-copy {
+    font-size: 13px;
+    line-height: 1.85;
+  }
+
+  .about-side-label {
+    right: 10px;
+    font-size: 8px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+  .about-section {
+    min-height: 100vh;
+    padding: 105px 38px 45px 22px;
+  }
+
+  .about-main {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+    padding-top: 10px;
+  }
+
+  .about-eyebrow {
+    margin-bottom: 18px;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+  }
+
+  .about-heading {
+    margin-bottom: 24px;
+    font-size: clamp(53px, 11vw, 76px);
+    line-height: 0.94;
+  }
+
+  .about-copy {
+    gap: 14px;
+    font-size: 12px;
+    line-height: 1.85;
+  }
+
+  .about-visual {
+    width: 100%;
+    height: auto;
+  }
+
+  .about-myimage {
+    width: 100%;
+    max-height: none;
+  }
+
+  .about-side-label {
+    top: 115px;
+    right: 8px;
+    gap: 7px;
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+  .about-side-line {
+    height: 30px;
+  }
+}
+
+/* ========================================
+   SMALL PHONES
+======================================== */
+
+@media (max-width: 380px) {
+  .about-section {
+    padding-right: 34px;
+    padding-left: 16px;
+  }
+
+  .about-heading {
+    font-size: 47px;
+  }
+
+  .about-copy {
+    font-size: 11px;
+  }
+
+  .about-side-label {
+    right: 5px;
+    font-size: 6px;
+    letter-spacing: 0.7px;
+  }
+
+  .about-side-line {
+    height: 24px;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .about-section *,
+  .about-section *::before,
+  .about-section *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

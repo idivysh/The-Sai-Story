@@ -1,0 +1,382 @@
+/* ========================================
+   ABOUT — SECTION 03: WHAT I DO
+======================================== */
+
+.what-i-do-section {
+  position: relative;
+  width: 100%;
+  padding: 85px 5% 100px;
+  color: #DDE8F7;
+  background: transparent;
+}
+
+/* Top divider */
+.what-i-do-divider {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  margin-bottom: 55px;
+  background: rgba(148, 166, 189, 0.22);
+}
+
+.what-i-do-divider span {
+  display: block;
+  width: 75px;
+  height: 2px;
+  background: #00A8FF;
+  box-shadow: 0 0 12px rgba(0, 168, 255, 0.35);
+}
+
+/* ========================================
+   HEADING
+======================================== */
+
+.what-i-do-heading {
+  max-width: 850px;
+  margin-bottom: 42px;
+}
+
+.what-i-do-eyebrow {
+  margin: 0 0 15px;
+  color: #00A8FF;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  line-height: 1.8;
+}
+
+.what-i-do-heading h2 {
+  margin: 0;
+  color: #DDE8F7;
+  font-family: var(--font-bebas-neue), sans-serif;
+  font-size: clamp(58px, 7vw, 90px);
+  font-weight: 400;
+  line-height: 0.95;
+}
+
+.what-i-do-heading h2 span {
+  color: #FFC247;
+}
+
+.what-i-do-intro {
+  max-width: 650px;
+  margin: 20px 0 0;
+  color: #B8C4D3;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* ========================================
+   ROLE CARD GRID
+======================================== */
+
+.what-i-do-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* Individual card */
+
+.what-i-do-card {
+  --role-color: #00A8FF;
+
+  position: relative;
+  display: flex;
+  min-height: 230px;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px 28px;
+  overflow: hidden;
+
+  border: 1px solid rgba(148, 166, 189, 0.17);
+  border-radius: 5px;
+  background: rgba(5, 9, 18, 0.48);
+
+  transition:
+    transform 350ms ease,
+    border-color 350ms ease,
+    background-color 350ms ease,
+    box-shadow 350ms ease;
+}
+
+/* Subtle background glow */
+
+.what-i-do-card::before {
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  background: var(--role-color);
+  content: "";
+  opacity: 0;
+  filter: blur(85px);
+  pointer-events: none;
+  transition: opacity 350ms ease;
+}
+
+/* Role colors */
+
+.what-i-do-blue {
+  --role-color: #00A8FF;
+}
+
+.what-i-do-gold {
+  --role-color: #FFC247;
+}
+
+.what-i-do-silver {
+  --role-color: #DDE8F7;
+}
+
+.what-i-do-red {
+  --role-color: #FF3038;
+}
+
+/* Card hover */
+
+.what-i-do-card:hover {
+  transform: translateY(-7px);
+  border-color: var(--role-color);
+  background: rgba(8, 15, 29, 0.85);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.22);
+}
+
+.what-i-do-card:hover::before {
+  opacity: 0.12;
+}
+
+/* Card top */
+
+.what-i-do-card-top {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.what-i-do-number {
+  color: #94A6BD;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.what-i-do-indicator {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--role-color);
+  box-shadow: 0 0 12px var(--role-color);
+}
+
+/* Card content */
+
+.what-i-do-card-content {
+  position: relative;
+  z-index: 1;
+  margin: 27px 0;
+}
+
+.what-i-do-card-content h3 {
+  margin: 0 0 12px;
+  color: #DDE8F7;
+  font-family: var(--font-bebas-neue), sans-serif;
+  font-size: 37px;
+  font-weight: 400;
+  letter-spacing: 0.035em;
+  transition: color 300ms ease;
+}
+
+.what-i-do-card:hover .what-i-do-card-content h3 {
+  color: var(--role-color);
+}
+
+.what-i-do-card-content p {
+  max-width: 440px;
+  margin: 0;
+  color: #94A6BD;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 12px;
+  line-height: 1.85;
+  transition: color 300ms ease;
+}
+
+.what-i-do-card:hover .what-i-do-card-content p {
+  color: #DDE8F7;
+}
+
+/* Card footer */
+
+.what-i-do-card-footer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(148, 166, 189, 0.15);
+}
+
+.what-i-do-card-footer > span:first-child {
+  color: #94A6BD;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.6;
+  transition: color 300ms ease;
+}
+
+.what-i-do-card:hover .what-i-do-card-footer > span:first-child {
+  color: var(--role-color);
+}
+
+
+
+
+/* ========================================
+   CLOSING STATEMENT
+======================================== */
+
+.what-i-do-closing {
+  max-width: 850px;
+  margin: 35px 0 0;
+  color: #B8C4D3;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (min-width: 769px) and (max-width: 1100px) {
+  .what-i-do-section {
+    padding: 70px 4% 80px;
+  }
+
+  .what-i-do-card {
+    min-height: 215px;
+    padding: 22px;
+  }
+
+  .what-i-do-card-content h3 {
+    font-size: 33px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+  .what-i-do-section {
+    padding: 55px 22px 65px;
+  }
+
+  .what-i-do-divider {
+    margin-bottom: 38px;
+  }
+
+  .what-i-do-heading {
+    margin-bottom: 30px;
+  }
+
+  .what-i-do-eyebrow {
+    font-size: 9px;
+    letter-spacing: 0.1em;
+  }
+
+  .what-i-do-heading h2 {
+    font-size: clamp(52px, 12vw, 72px);
+  }
+
+  .what-i-do-intro {
+    margin-top: 15px;
+    font-size: 12px;
+    line-height: 1.85;
+  }
+
+  .what-i-do-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 13px;
+  }
+
+  .what-i-do-card {
+    min-height: 195px;
+    padding: 21px;
+  }
+
+  .what-i-do-card-content {
+    margin: 23px 0;
+  }
+
+  .what-i-do-card-content h3 {
+    font-size: 34px;
+  }
+
+  .what-i-do-card-content p {
+    font-size: 11px;
+  }
+
+  .what-i-do-closing {
+    margin-top: 25px;
+    font-size: 11px;
+    line-height: 1.85;
+  }
+
+  /* Touch devices: keep cards visually consistent */
+  .what-i-do-card:hover {
+    transform: none;
+  }
+}
+
+/* Small phones */
+
+@media (max-width: 380px) {
+  .what-i-do-section {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .what-i-do-heading h2 {
+    font-size: 48px;
+  }
+
+  .what-i-do-card {
+    padding: 18px;
+  }
+
+  .what-i-do-card-content h3 {
+    font-size: 31px;
+  }
+
+  .what-i-do-card-footer > span:first-child {
+    font-size: 8px;
+  }
+
+  .what-i-do-closing {
+    font-size: 10px;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .what-i-do-card,
+  .what-i-do-card::before,
+  .what-i-do-card-content h3,
+  .what-i-do-card-content p,
+  .what-i-do-card-footer > span {
+    transition: none;
+  }
+}

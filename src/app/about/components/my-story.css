@@ -1,0 +1,196 @@
+/* ========================================
+   ABOUT — SECTION 02: MY STORY
+======================================== */
+
+.my-story-section {
+  position: relative;
+  width: 100%;
+  padding: 55px 5% 100px;
+  color: #DDE8F7;
+  background: transparent;
+}
+
+.my-story-container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+/* Top divider */
+
+.my-story-divider {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  margin-bottom: 55px;
+  background: rgba(148, 166, 189, 0.22);
+}
+
+.my-story-divider span {
+  display: block;
+  width: 75px;
+  height: 2px;
+  background: #00A8FF;
+  box-shadow: 0 0 12px rgba(0, 168, 255, 0.35);
+}
+
+/* Heading */
+
+.my-story-heading {
+  margin-bottom: 35px;
+}
+
+.my-story-heading h2 {
+  margin: 0;
+  color: #DDE8F7;
+  font-family: var(--font-bebas-neue), sans-serif;
+  font-size: clamp(55px, 7vw, 90px);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+}
+
+.my-story-heading h2 span {
+  color: #FFC247;
+}
+
+/* Tagline */
+
+.my-story-tagline {
+  margin: 17px 0 0;
+  color: #00A8FF;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  line-height: 1.8;
+}
+
+/* Story paragraphs */
+
+.my-story-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1050px;
+  margin-left: 0;
+  padding-left: 22px;
+  border-left: 1px solid rgba(0, 168, 255, 0.35);
+}
+
+.my-story-content p {
+  margin: 0;
+  color: #B8C4D3;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 2;
+}
+
+/* Bottom accent */
+
+.my-story-bottom-accent {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 1050px;
+  margin-top: 35px;
+}
+
+.my-story-bottom-accent span {
+  display: block;
+  width: 42px;
+  height: 2px;
+  background: #FFC247;
+  box-shadow: 0 0 10px rgba(255, 194, 71, 0.25);
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (min-width: 769px) and (max-width: 1100px) {
+  .my-story-section {
+    padding: 45px 4% 75px;
+  }
+
+  .my-story-divider {
+    margin-bottom: 45px;
+  }
+
+  .my-story-heading h2 {
+    font-size: 72px;
+  }
+
+  .my-story-content {
+    max-width: 900px;
+  }
+
+  .my-story-content p {
+    font-size: 13px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+  .my-story-section {
+    padding: 35px 22px 65px;
+  }
+
+  .my-story-divider {
+    margin-bottom: 38px;
+  }
+
+  .my-story-heading {
+    margin-bottom: 27px;
+  }
+
+  .my-story-heading h2 {
+    font-size: clamp(52px, 12vw, 72px);
+  }
+
+  .my-story-tagline {
+    margin-top: 13px;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+  }
+
+  .my-story-content {
+    gap: 16px;
+    padding-left: 15px;
+  }
+
+  .my-story-content p {
+    font-size: 12px;
+    line-height: 1.9;
+  }
+
+  .my-story-bottom-accent {
+    margin-top: 27px;
+  }
+}
+
+/* Small phones */
+
+@media (max-width: 380px) {
+  .my-story-section {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .my-story-heading h2 {
+    font-size: 48px;
+  }
+
+  .my-story-tagline {
+    font-size: 8px;
+  }
+
+  .my-story-content p {
+    font-size: 11px;
+  }
+}
