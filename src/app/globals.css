@@ -1032,16 +1032,40 @@ h6 {
   flex-direction: column;
 }
 
-.site-content > main {
+.site-content > .main-website {
   flex: 1;
 }
 
-
 /* =========================================
-   RESPONSIVE FIXED WEBSITE BACKGROUND
+   THE SAI STORY — GLOBAL WEBSITE BACKGROUND
 ========================================= */
 
-/* Mobile background */
+.main-website {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: transparent;
+}
+
+.main-website::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("/assets/main-background.png") center / cover no-repeat;
+}
+
+/* Mobile website background */
+
 @media (max-width: 600px) {
   .main-website::before {
     background:
@@ -1057,17 +1081,17 @@ h6 {
    MOBILE SPLASH BACKGROUND
 ========================================= */
 
-@media (max-width: 600px) {
-  .splash-screen {
-    background-image:
-      linear-gradient(
-        rgba(0, 0, 0, 0.6),
-        rgba(0, 0, 0, 0.6)
-      ),
-      url("/assets/mobile-splash-background.png");
+  @media (max-width: 600px) {
+    .splash-screen {
+      background-image:
+        linear-gradient(
+          rgba(0, 0, 0, 0.6),
+          rgba(0, 0, 0, 0.6)
+        ),
+        url("/assets/mobile-splash-background.png");
 
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
   }
-}

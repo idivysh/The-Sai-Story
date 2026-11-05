@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useCallback, useState } from "react";
@@ -27,9 +26,11 @@ export default function SiteShell({ children }: SiteShellProps) {
         className="site-content"
         style={{ visibility: splashFinished ? "visible" : "hidden" }}
       >
-        <Navbar />
-        {children}
-        <Footer />
+        <div className="main-website">
+          <Navbar />
+          {children}
+          <Footer />
+        </div>
       </div>
     </div>
   );
