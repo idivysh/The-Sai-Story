@@ -31,3 +31,32 @@ export async function getSelectedProjects() {
 
   return selectedProjects;
 }
+
+export async function getAllProjects() {
+  const repositories = await getGitHubRepositories();
+
+  const allProjects = repositories
+    .map((repository) => {
+      const config = projectConfig.find(
+        (project) => project.repo === repository.name
+      );
+
+      if (config && !config.visible) {
+        return null;
+      }
+
+      return {
+        ...repository,
+        title: config?.title ?? repository.name,
+        description:
+          config?.description ?? repository.description ?? "",
+        image: config?.image,
+        featured: config?.featured ?? false,
+        order: config?.order ?? null,
+        homepage: repository.homepage,
+      };
+    })
+    .filter((project) => project !== null);
+
+  return allProjects;
+}
