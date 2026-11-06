@@ -1,0 +1,393 @@
+
+/* ========================================
+   ABOUT — SECTION 05: BEYOND WORK
+======================================== */
+
+.beyond-work-section {
+  position: relative;
+  width: 100%;
+  padding: 65px 5% 100px;
+  color: #DDE8F7;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+.beyond-work-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* ========================================
+   TOP DIVIDER
+======================================== */
+
+.beyond-work-divider {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  margin-bottom: 55px;
+  background: rgba(148, 166, 189, 0.22);
+}
+
+.beyond-work-divider span {
+  display: block;
+  width: 75px;
+  height: 2px;
+  background: #00A8FF;
+  box-shadow: 0 0 12px rgba(0, 168, 255, 0.35);
+}
+
+/* ========================================
+   HEADING
+======================================== */
+
+.beyond-work-heading {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.beyond-work-heading h2 {
+  margin: 0;
+  color: #DDE8F7;
+  font-family: var(--font-bebas-neue), sans-serif;
+  font-size: clamp(55px, 7vw, 90px);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+}
+
+.beyond-work-heading h2 span {
+  color: #FFC247;
+}
+
+.beyond-work-heading > p {
+  margin: 17px 0 0;
+  color: #00A8FF;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  line-height: 1.8;
+}
+
+/* ========================================
+   INTRODUCTION
+======================================== */
+
+.beyond-work-intro {
+  max-width: 650px;
+  margin: 0 0 40px;
+  color: #B8C4D3;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 14px;
+  line-height: 1.9;
+  text-align: left;
+}
+
+/* ========================================
+   PERSONAL INTERESTS
+   CENTRED CONTAINER
+======================================== */
+
+.beyond-work-section .beyond-work-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  width: 100%;
+  max-width: 800px;
+
+  margin: 0 auto;
+
+  gap: 0;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+/* Each interest row */
+
+.beyond-work-section .beyond-work-card {
+  display: grid;
+  grid-template-columns: 100px minmax(0, 1fr);
+  align-items: start;
+  gap: 30px;
+
+  width: 100%;
+  padding: 28px 18px;
+
+  box-sizing: border-box;
+  border: none;
+  background: transparent;
+  text-align: left;
+}
+
+/* Number */
+
+.beyond-work-section .beyond-work-number {
+  display: block;
+  color: #FFC247;
+  font-family: var(--font-bebas-neue), sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+/* Right-side content */
+
+.beyond-work-section .beyond-work-card-content {
+  min-width: 0;
+  margin: 0;
+  text-align: left;
+}
+
+/* Interest title */
+
+.beyond-work-section .beyond-work-card-content h3 {
+  margin: -5px 0 10px;
+  color: #DDE8F7;
+  font-family: var(--font-bebas-neue), sans-serif;
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.035em;
+}
+
+/* Interest description */
+
+.beyond-work-section .beyond-work-card-content p {
+  width: 100%;
+  max-width: 600px;
+  margin: 0;
+
+  color: #94A6BD;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.95;
+}
+
+/* ========================================
+   EXTRA CONTENT
+======================================== */
+
+.beyond-work-extra {
+  max-width: 850px;
+  margin-top: 35px;
+  text-align: left;
+}
+
+.beyond-work-extra p {
+  margin: 0;
+  color: #B8C4D3;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 13px;
+  line-height: 1.95;
+}
+
+/* ========================================
+   CLOSING STATEMENT
+======================================== */
+
+.beyond-work-closing {
+  display: flex;
+  align-items: stretch;
+  gap: 15px;
+  max-width: 850px;
+  margin-top: 27px;
+  text-align: left;
+}
+
+.beyond-work-closing > span {
+  flex: 0 0 2px;
+  width: 2px;
+  border-radius: 2px;
+  background: #FFC247;
+  box-shadow: 0 0 10px rgba(255, 194, 71, 0.2);
+}
+
+.beyond-work-closing p {
+  margin: 0;
+  color: #DDE8F7;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.9;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (min-width: 769px) and (max-width: 1100px) {
+  .beyond-work-section {
+    padding: 55px 4% 80px;
+  }
+
+  .beyond-work-divider {
+    margin-bottom: 45px;
+  }
+
+  .beyond-work-section .beyond-work-grid {
+    width: 100%;
+    max-width: 800px;
+    margin-inline: auto;
+  }
+
+  .beyond-work-section .beyond-work-card {
+    grid-template-columns: 85px minmax(0, 1fr);
+    gap: 22px;
+    padding: 24px 15px;
+  }
+
+  .beyond-work-section .beyond-work-card-content h3 {
+    font-size: 34px;
+  }
+
+  .beyond-work-section .beyond-work-card-content p {
+    max-width: 600px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+  .beyond-work-section {
+    padding: 45px 22px 65px;
+  }
+
+  .beyond-work-container {
+    width: 100%;
+    max-width: none;
+  }
+
+  .beyond-work-divider {
+    margin-bottom: 38px;
+  }
+
+  .beyond-work-heading {
+    margin-bottom: 20px;
+  }
+
+  .beyond-work-heading h2 {
+    font-size: clamp(52px, 12vw, 72px);
+  }
+
+  .beyond-work-heading > p {
+    margin-top: 13px;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+  }
+
+  .beyond-work-intro {
+    margin-bottom: 25px;
+    font-size: 12px;
+    line-height: 1.85;
+  }
+
+  .beyond-work-section .beyond-work-grid {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .beyond-work-section .beyond-work-card {
+    grid-template-columns: 55px minmax(0, 1fr);
+    gap: 15px;
+    padding: 22px 0;
+  }
+
+  .beyond-work-section .beyond-work-number {
+    font-size: 38px;
+  }
+
+  .beyond-work-section .beyond-work-card-content h3 {
+    margin-top: -3px;
+    margin-bottom: 8px;
+    font-size: 30px;
+  }
+
+  .beyond-work-section .beyond-work-card-content p {
+    max-width: 600px;
+    font-size: 11px;
+    line-height: 1.85;
+  }
+
+  .beyond-work-extra {
+    margin-top: 25px;
+  }
+
+  .beyond-work-extra p {
+    font-size: 11px;
+    line-height: 1.9;
+  }
+
+  .beyond-work-closing {
+    margin-top: 21px;
+  }
+
+  .beyond-work-closing p {
+    font-size: 11px;
+    line-height: 1.85;
+  }
+}
+
+/* ========================================
+   SMALL PHONES
+======================================== */
+
+@media (max-width: 380px) {
+  .beyond-work-section {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .beyond-work-heading h2 {
+    font-size: 48px;
+  }
+
+  .beyond-work-heading > p {
+    font-size: 8px;
+  }
+
+  .beyond-work-intro,
+  .beyond-work-extra p {
+    font-size: 11px;
+  }
+
+  .beyond-work-section .beyond-work-card {
+    grid-template-columns: 45px minmax(0, 1fr);
+    gap: 12px;
+    padding: 19px 0;
+  }
+
+  .beyond-work-section .beyond-work-number {
+    font-size: 34px;
+  }
+
+  .beyond-work-section .beyond-work-card-content h3 {
+    font-size: 27px;
+  }
+
+  .beyond-work-section .beyond-work-card-content p {
+    font-size: 10px;
+  }
+
+  .beyond-work-closing p {
+    font-size: 10px;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .beyond-work-section .beyond-work-card {
+    transition: none;
+  }
+}

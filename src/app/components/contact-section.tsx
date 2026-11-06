@@ -145,7 +145,7 @@ export default function ContactSection() {
               </div>
 
               <Link
-                href="/assets/resume.pdf"
+                href="/assets/idivysh-resume.pdf"
                 className="contact-resume-button"
                 download
               >
