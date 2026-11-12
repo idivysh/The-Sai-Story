@@ -1,0 +1,197 @@
+
+/* ========================================
+   EXPERIENCE PAGE
+======================================== */
+
+.experience-page {
+  position: relative;
+  width: 100%;
+  padding: 160px 5% 20px;
+  color: #DDE8F7;
+  background: transparent;
+}
+
+.experience-container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+/* ========================================
+   INTRODUCTION LAYOUT
+======================================== */
+
+.experience-intro-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 45px;
+  width: 100%;
+}
+
+.experience-intro {
+  width: 100%;
+}
+
+.experience-heading {
+  margin: 0 0 30px;
+  color: #DDE8F7;
+  font-family: var(--font-bebas-neue), sans-serif;
+  font-size: clamp(58px, 6.5vw, 100px);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: 0.005em;
+}
+
+.experience-heading span {
+  color: #FFC247;
+}
+
+.experience-tagline {
+  margin: 0 0 17px;
+  color: #00A8FF;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  line-height: 1.8;
+}
+
+.experience-description {
+  display: grid;
+  gap: 20px;
+  max-width: 650px;
+  color: #B8C4D3;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 14px;
+  line-height: 1.95;
+}
+
+.experience-description p {
+  margin: 0;
+}
+
+/* ========================================
+   EXPERIENCE HERO VISUAL
+======================================== */
+
+.experience-hero-visual {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.35 / 1;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.experience-hero-visual img {
+  object-fit: contain;
+  object-position: center;
+  transition: transform 0.6s ease;
+}
+
+.experience-hero-visual:hover img {
+  transform: scale(1.035);
+}
+
+/* ========================================
+   PROFESSIONAL EXPERIENCE
+   KEEP YOUR EXISTING STYLES
+======================================== */
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (min-width: 769px) and (max-width: 1100px) {
+  .experience-page {
+    padding: 130px 4% 20px;
+  }
+
+  .experience-intro-layout {
+    gap: 30px;
+  }
+
+  .experience-heading {
+    font-size: clamp(55px, 6.5vw, 75px);
+  }
+
+  .experience-description {
+    font-size: 13px;
+    line-height: 1.85;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+  .experience-page {
+    padding: 105px 22px 20px;
+  }
+
+  .experience-intro-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .experience-heading {
+    margin-bottom: 24px;
+    font-size: clamp(53px, 11vw, 76px);
+    line-height: 0.94;
+  }
+
+  .experience-tagline {
+    margin-bottom: 13px;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+  }
+
+  .experience-description {
+    font-size: 12px;
+    line-height: 1.9;
+  }
+
+  .experience-hero-visual {
+    aspect-ratio: 1.35 / 1;
+    max-width: 550px;
+    margin-inline: auto;
+  }
+}
+
+/* ========================================
+   SMALL PHONES
+======================================== */
+
+@media (max-width: 380px) {
+  .experience-page {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .experience-heading {
+    font-size: 48px;
+  }
+
+  .experience-tagline {
+    font-size: 8px;
+  }
+
+  .experience-description {
+    font-size: 11px;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .experience-page *,
+  .experience-page *::before,
+  .experience-page *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

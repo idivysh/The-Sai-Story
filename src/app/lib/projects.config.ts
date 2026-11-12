@@ -22,6 +22,7 @@ const projectConfig: ProjectConfig[] = [
     image: "/assets/projects/smaubct.png",
   },
 
+
   {
     repo: "Age-And-Gender-Prediction-In-Facial-Images-Using-Deep-Learning",
     featured: true,

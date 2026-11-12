@@ -1,0 +1,360 @@
+
+/* ========================================
+   PROFESSIONAL EXPERIENCE
+======================================== */
+
+.professional-experience-section {
+  position: relative;
+  width: 100%;
+  padding: 55px 5% 100px;
+  color: #DDE8F7;
+  background: transparent;
+}
+
+.professional-experience-container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+/* ========================================
+   SECTION DIVIDER
+======================================== */
+
+.professional-divider {
+  width: 100%;
+  height: 1px;
+  margin-bottom: 55px;
+  background: rgba(148, 166, 189, 0.22);
+}
+
+.professional-divider span {
+  display: block;
+  width: 75px;
+  height: 2px;
+  background: #00A8FF;
+  box-shadow: 0 0 12px rgba(0, 168, 255, 0.35);
+}
+
+/* ========================================
+   MAIN HEADING
+======================================== */
+
+.professional-heading {
+  margin-bottom: 45px;
+}
+
+.professional-heading h2 {
+  margin: 0;
+  color: #DDE8F7;
+  font-family: var(--font-bebas-neue), sans-serif;
+  font-size: clamp(55px, 7vw, 90px);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+}
+
+.professional-heading h2 span {
+  color: #FFC247;
+}
+
+.professional-heading > p {
+  margin: 15px 0 0;
+  color: #00A8FF;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  line-height: 1.8;
+}
+
+/* ========================================
+   EXPERIENCE ENTRIES
+======================================== */
+
+.professional-entries {
+  width: 100%;
+}
+
+.professional-entry {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 65px;
+  padding: 42px 0;
+  border-top: 1px solid rgba(148, 166, 189, 0.18);
+}
+
+.professional-entry:last-child {
+  border-bottom: 1px solid rgba(148, 166, 189, 0.18);
+}
+
+/* ========================================
+   LEFT COLUMN
+======================================== */
+
+.professional-entry-left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.professional-entry-number {
+  margin-bottom: 20px;
+  color: #FFC247;
+  font-family: var(--font-bebas-neue), sans-serif;
+  font-size: 38px;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+.professional-entry-left h3 {
+  margin: 0;
+  color: #DDE8F7;
+  font-family: var(--font-bebas-neue), sans-serif;
+  font-size: clamp(35px, 4vw, 48px);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.professional-entry-tagline {
+  margin: 10px 0 18px;
+  color: #00A8FF;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  line-height: 1.7;
+}
+
+.professional-entry-type {
+  padding: 7px 12px;
+  border: 1px solid rgba(255, 194, 71, 0.4);
+  border-radius: 3px;
+  color: #FFC247;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.professional-entry-dates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-top: 18px;
+}
+
+.professional-entry-dates span {
+  color: #94A6BD;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+/* ========================================
+   RIGHT COLUMN
+======================================== */
+
+.professional-entry-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 0;
+}
+
+.professional-entry-description {
+  max-width: 620px;
+  margin: 0;
+  color: #B8C4D3;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 13px;
+  line-height: 1.95;
+}
+
+.professional-tool-icon.invert-shadcn img {
+  filter: brightness(0) invert(1);
+}
+
+/* ========================================
+   STREET CAUSE ROLES
+======================================== */
+
+.professional-role-list {
+  display: grid;
+  width: 100%;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.professional-role-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding-left: 13px;
+  border-left: 2px solid #00A8FF;
+}
+
+.professional-role-line span:first-child {
+  color: #DDE8F7;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.professional-role-line span:last-child {
+  color: #94A6BD;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+/* ========================================
+   TOOL SVG LOGOS
+======================================== */
+
+.professional-tool-logos {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-top: 25px;
+}
+
+.professional-tool-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 39px;
+  height: 39px;
+  padding: 7px;
+  border: 1px solid rgba(148, 166, 189, 0.2);
+  border-radius: 7px;
+  background: rgba(5, 9, 18, 0.7);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.professional-tool-icon:hover {
+  transform: translateY(-3px);
+  border-color: #00A8FF;
+}
+
+.professional-tool-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (min-width: 769px) and (max-width: 1100px) {
+  .professional-experience-section {
+    padding: 45px 4% 75px;
+  }
+
+  .professional-divider {
+    margin-bottom: 45px;
+  }
+
+  .professional-heading h2 {
+    font-size: 72px;
+  }
+
+  .professional-entry {
+    gap: 35px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+  .professional-experience-section {
+    padding: 35px 22px 65px;
+  }
+
+  .professional-divider {
+    margin-bottom: 38px;
+  }
+
+  .professional-heading {
+    margin-bottom: 35px;
+  }
+
+  .professional-heading h2 {
+    font-size: clamp(52px, 12vw, 72px);
+  }
+
+  .professional-heading > p {
+    font-size: 9px;
+  }
+
+  .professional-entry {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 30px 0;
+  }
+
+  .professional-entry-number {
+    margin-bottom: 13px;
+    font-size: 32px;
+  }
+
+  .professional-entry-left h3 {
+    font-size: 38px;
+  }
+
+  .professional-entry-tagline {
+    font-size: 9px;
+  }
+
+  .professional-entry-description {
+    font-size: 12px;
+    line-height: 1.9;
+  }
+
+  .professional-tool-logos {
+    margin-top: 20px;
+  }
+}
+
+/* ========================================
+   SMALL PHONES
+======================================== */
+
+@media (max-width: 380px) {
+  .professional-experience-section {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .professional-heading h2 {
+    font-size: 48px;
+  }
+
+  .professional-entry-left h3 {
+    font-size: 34px;
+  }
+
+  .professional-entry-description {
+    font-size: 11px;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .professional-experience-section *,
+  .professional-experience-section *::before,
+  .professional-experience-section *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

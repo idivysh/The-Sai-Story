@@ -22,7 +22,7 @@ const experiences = [
   {
     id: "vijnah",
     role: "Founder",
-    company: "Vijnah Media",
+    company: "Vijnah Studio",
     logo: "/assets/experience/vijnah-studio.png",
     employment: "Freelance",
     dates: "APR 2025 — PRESENT",
