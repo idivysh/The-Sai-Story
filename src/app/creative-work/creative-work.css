@@ -1,0 +1,578 @@
+
+/* =========================================
+   THE SAI STORY
+   STANDALONE CREATIVE WORK PAGE
+   Fully isolated from homepage styles
+========================================= */
+
+.creative-work-page {
+  --cwp-blue: #00A8FF;
+  --cwp-gold: #FFC247;
+  --cwp-white: #DDE8F7;
+  --cwp-muted: #94A6BD;
+  --cwp-body: #B8C4D3;
+
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 150px 7% 75px;
+  color: var(--cwp-white);
+  background: transparent;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.creative-work-page *,
+.creative-work-page *::before,
+.creative-work-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   01. INTRODUCTION
+========================================= */
+
+.creative-work-page .cwp-intro {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto 65px;
+}
+
+
+/* TOPLINE */
+
+.creative-work-page .cwp-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(148, 166, 189, 0.22);
+
+  color: var(--cwp-muted);
+
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.creative-work-page .cwp-index {
+  color: var(--cwp-blue);
+}
+
+
+/* HEADING CONTENT */
+
+.creative-work-page .cwp-heading-content {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.creative-work-page .cwp-heading-main {
+  min-width: 0;
+}
+
+.creative-work-page .cwp-eyebrow {
+  margin: 0 0 22px;
+
+  color: var(--cwp-blue);
+
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.creative-work-page .cwp-heading-main h1 {
+  margin: 0;
+
+  color: var(--cwp-white);
+
+  font-family: var(--font-bebas-neue), sans-serif;
+  font-size: clamp(75px, 10vw, 145px);
+  font-weight: 400;
+  line-height: 0.84;
+  letter-spacing: -0.025em;
+}
+
+.creative-work-page .cwp-heading-main h1 span {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--cwp-blue);
+}
+
+
+/* INTRO DESCRIPTION */
+
+.creative-work-page .cwp-intro-description {
+  width: 100%;
+  max-width: 330px;
+  flex-shrink: 0;
+
+  margin: 0 0 8px;
+
+  color: var(--cwp-body);
+
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.9;
+}
+
+
+/* =========================================
+   02. ASYMMETRIC PROJECT GRID
+========================================= */
+
+.creative-work-page .cwp-project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  column-gap: 25px;
+  row-gap: 55px;
+
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+
+/* PROJECT CARD */
+
+.creative-work-page .cwp-project {
+  display: block;
+  min-width: 0;
+}
+
+
+/* WIDE PROJECTS — 2 PARTS */
+
+.creative-work-page .cwp-wide {
+  grid-column: span 2;
+}
+
+
+/* SQUARE PROJECTS — 1 PART */
+
+.creative-work-page .cwp-square {
+  grid-column: span 1;
+}
+
+
+/* =========================================
+   03. PROJECT IMAGE
+========================================= */
+
+.creative-work-page .cwp-image-link {
+  display: block;
+  width: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.creative-work-page .cwp-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+
+  overflow: hidden;
+
+  background: rgba(148, 166, 189, 0.08);
+  border: 1px solid rgba(148, 166, 189, 0.15);
+}
+
+
+/* WIDE IMAGE */
+
+.creative-work-page .cwp-wide .cwp-image-wrapper {
+  aspect-ratio: 2 / 1;
+}
+
+
+/* SQUARE IMAGE */
+
+.creative-work-page .cwp-square .cwp-image-wrapper {
+  aspect-ratio: 1 / 1;
+}
+
+
+/* IMAGE */
+
+.creative-work-page .cwp-image {
+  object-fit: cover;
+  object-position: center;
+
+  opacity: 0;
+  animation: cwp-image-reveal 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+
+  transition: transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes cwp-image-reveal {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================
+   04. PROJECT INFORMATION
+========================================= */
+
+.creative-work-page .cwp-project-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  padding: 19px 2px 0;
+}
+
+
+/* PROJECT NAME AND CATEGORY */
+
+.creative-work-page .cwp-project-text {
+  min-width: 0;
+}
+
+.creative-work-page .cwp-project-text h2 {
+  margin: 0;
+
+  color: var(--cwp-white);
+
+  font-family: var(--font-manrope), sans-serif;
+  font-size: clamp(18px, 2vw, 25px);
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -0.045em;
+}
+
+.creative-work-page .cwp-project-text p {
+  margin: 7px 0 0;
+
+  color: var(--cwp-muted);
+
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   05. CIRCULAR PROJECT ARROW
+   SAME DESIGN AS HOMEPAGE ARROW
+========================================= */
+
+.creative-work-page .cwp-project-arrow-link {
+  display: grid;
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  place-items: center;
+
+  border: 1px solid rgba(148, 166, 189, 0.4);
+  border-radius: 50%;
+
+  color: var(--cwp-white);
+  background: rgba(5, 9, 18, 0.5);
+
+  text-decoration: none;
+
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.creative-work-page .cwp-project-arrow-link svg {
+  display: block;
+  flex-shrink: 0;
+}
+
+
+/* GOLD HOVER */
+
+.creative-work-page .cwp-project-arrow-link:hover {
+  color: #050912;
+  background: var(--cwp-gold);
+  border-color: var(--cwp-gold);
+  transform: rotate(45deg);
+}
+
+
+/* KEYBOARD FOCUS */
+
+.creative-work-page .cwp-project-arrow-link:focus-visible,
+.creative-work-page .cwp-image-link:focus-visible {
+  outline: 2px solid var(--cwp-blue);
+  outline-offset: 4px;
+}
+
+
+/* =========================================
+   06. PROJECT HOVER INTERACTIONS
+========================================= */
+
+/* IMAGE ZOOM ONLY */
+
+.creative-work-page .cwp-project:hover .cwp-image {
+  transform: scale(1.045);
+}
+
+
+/* NAME NEVER CHANGES COLOUR */
+
+.creative-work-page .cwp-project:hover .cwp-project-text h2 {
+  color: var(--cwp-white);
+}
+
+
+/* CATEGORY NEVER CHANGES COLOUR */
+
+.creative-work-page .cwp-project:hover .cwp-project-text p {
+  color: var(--cwp-muted);
+}
+
+
+/* =========================================
+   07. BOTTOM LINE
+========================================= */
+
+.creative-work-page .cwp-bottom-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  width: 100%;
+  max-width: 1500px;
+
+  margin: 110px auto 0;
+  padding-top: 22px;
+
+  border-top: 1px solid rgba(148, 166, 189, 0.2);
+
+  color: var(--cwp-muted);
+
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+
+/* =========================================
+   08. TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .creative-work-page {
+    padding: 130px 5% 65px;
+  }
+
+  .creative-work-page .cwp-heading-content {
+    padding-top: 65px;
+    gap: 25px;
+  }
+
+  .creative-work-page .cwp-heading-main h1 {
+    font-size: clamp(75px, 11vw, 105px);
+  }
+
+  .creative-work-page .cwp-intro-description {
+    max-width: 270px;
+    font-size: 12px;
+  }
+
+  .creative-work-page .cwp-project-grid {
+    column-gap: 18px;
+    row-gap: 42px;
+  }
+
+  .creative-work-page .cwp-project-info {
+    padding-top: 15px;
+  }
+
+  .creative-work-page .cwp-project-text h2 {
+    font-size: 19px;
+  }
+
+  .creative-work-page .cwp-project-text p {
+    font-size: 8px;
+  }
+
+  .creative-work-page .cwp-project-arrow-link {
+    width: 52px;
+    height: 52px;
+  }
+
+}
+
+
+/* =========================================
+   09. MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .creative-work-page {
+    padding: 115px 6% 55px;
+  }
+
+
+  /* INTRO */
+
+  .creative-work-page .cwp-intro {
+    margin-bottom: 45px;
+  }
+
+  .creative-work-page .cwp-topline {
+    font-size: 8px;
+    letter-spacing: 0.1em;
+  }
+
+  .creative-work-page .cwp-heading-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+
+    padding-top: 60px;
+  }
+
+  .creative-work-page .cwp-eyebrow {
+    margin-bottom: 17px;
+    font-size: 9px;
+  }
+
+  .creative-work-page .cwp-heading-main h1 {
+    font-size: clamp(68px, 17vw, 100px);
+  }
+
+  .creative-work-page .cwp-intro-description {
+    max-width: 310px;
+    margin: 0;
+
+    font-size: 12px;
+    line-height: 1.85;
+  }
+
+
+  /* GRID */
+
+  .creative-work-page .cwp-project-grid {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 38px;
+  }
+
+  .creative-work-page .cwp-wide,
+  .creative-work-page .cwp-square {
+    grid-column: span 1;
+  }
+
+
+  /* MOBILE IMAGE PROPORTIONS */
+
+  .creative-work-page .cwp-wide .cwp-image-wrapper,
+  .creative-work-page .cwp-square .cwp-image-wrapper {
+    aspect-ratio: 4 / 3;
+  }
+
+
+  /* PROJECT DETAILS */
+
+  .creative-work-page .cwp-project-info {
+    padding: 14px 2px 0;
+  }
+
+  .creative-work-page .cwp-project-text h2 {
+    font-size: 20px;
+  }
+
+  .creative-work-page .cwp-project-text p {
+    margin-top: 5px;
+    font-size: 8px;
+  }
+
+
+  /* CIRCULAR ARROW */
+
+  .creative-work-page .cwp-project-arrow-link {
+    width: 46px;
+    height: 46px;
+  }
+
+  .creative-work-page .cwp-project-arrow-link svg {
+    width: 21px;
+    height: 21px;
+  }
+
+
+  /* BOTTOM */
+
+  .creative-work-page .cwp-bottom-line {
+    margin-top: 75px;
+    font-size: 7px;
+  }
+
+}
+
+
+/* =========================================
+   10. SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+
+  .creative-work-page {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+
+  .creative-work-page .cwp-heading-main h1 {
+    font-size: 65px;
+  }
+
+  .creative-work-page .cwp-project-text h2 {
+    font-size: 18px;
+  }
+
+  .creative-work-page .cwp-project-arrow-link {
+    width: 42px;
+    height: 42px;
+  }
+
+  .creative-work-page .cwp-bottom-line {
+    font-size: 6px;
+  }
+
+}
+
+
+/* =========================================
+   11. REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .creative-work-page .cwp-image,
+  .creative-work-page .cwp-project-arrow-link {
+    transition: none;
+  }
+
+  .creative-work-page .cwp-project:hover .cwp-image {
+    transform: none;
+  }
+
+}

@@ -316,7 +316,7 @@ export default function ContactPage() {
             </p>
 
             <h2>
-              GET TO KNOW MY <span>JOURNEY.</span>
+              GET TO KNOW MY JOURNEY<span>.</span>
             </h2>
 
             <p>
