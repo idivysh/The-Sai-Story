@@ -465,6 +465,7 @@ export default function EducationPage() {
 
 
 
+
         {/* =====================================
             SECTION 04 — AREAS OF INTEREST
         ===================================== */}
@@ -481,32 +482,35 @@ export default function EducationPage() {
 
             <div className="interest-layout">
 
-            {/* LEFT — SECTION HEADING */}
-            <div className="interest-heading">
+            {/* LEFT — HEADING AND DESCRIPTION */}
+            <div className="interest-copy">
+
+                <div className="interest-heading">
                 <h2>
-                AREAS OF
-                <br />
-                INTEREST<span>.</span>
+                    AREAS OF
+                    <br />
+                    INTEREST<span>.</span>
                 </h2>
 
                 <p>
-                THE FIELDS THAT SPARK MY CURIOSITY.
-                </p>
-
-                <div className="interest-extra-description">
-                <p>
-                    Beyond technology and creativity, there's a lot more that makes me who I am.
-                    I find joy in music, exploring different foods, playing games, discovering
-                    new places and experiencing the little things that make life interesting.
-                    Whether it's trying something new, enjoying a good melody, experimenting
-                    in the kitchen or simply taking time to explore, I believe inspiration can
-                    come from anywhere. For me, learning isn't limited to a field or a
-                    profession — it's a part of everyday life.
+                    THE FIELDS THAT SPARK MY CURIOSITY.
                 </p>
                 </div>
+
+                <p className="interest-extra-description">
+                Beyond technology and creativity, there's a lot more that makes
+                me who I am. I find joy in music, exploring different foods,
+                playing games, discovering new places and experiencing the
+                little things that make life interesting. Whether it's trying
+                something new, enjoying a good melody, experimenting in the
+                kitchen or simply taking time to explore, I believe inspiration
+                can come from anywhere. For me, learning isn't limited to a
+                field or a profession — it's a part of everyday life.
+                </p>
+
             </div>
 
-            {/* RIGHT — FIVE VERTICAL INTERESTS */}
+            {/* RIGHT — FIVE AREAS OF INTEREST */}
             <div className="interest-list">
 
                 <article className="interest-item">
@@ -519,7 +523,6 @@ export default function EducationPage() {
                     concepts, and practical AI applications.
                     </p>
                 </div>
-
                 </article>
 
                 <article className="interest-item">
@@ -532,7 +535,6 @@ export default function EducationPage() {
                     and transforming data into meaningful insights.
                     </p>
                 </div>
-
                 </article>
 
                 <article className="interest-item">
@@ -545,7 +547,6 @@ export default function EducationPage() {
                     logical thinking, and problem-solving.
                     </p>
                 </div>
-
                 </article>
 
                 <article className="interest-item">
@@ -558,7 +559,6 @@ export default function EducationPage() {
                     modern web and application technologies.
                     </p>
                 </div>
-
                 </article>
 
                 <article className="interest-item">
@@ -571,8 +571,6 @@ export default function EducationPage() {
                     through design, visual storytelling, and digital ideas.
                     </p>
                 </div>
-
-
                 </article>
 
             </div>
@@ -586,12 +584,11 @@ export default function EducationPage() {
                 CURIOSITY OPENS DOORS.
                 <strong> EXPLORATION CREATES POSSIBILITIES.</strong>
             </p>
-
-            
             </div>
 
         </div>
         </section>
+
 
         <ContactSection />
 

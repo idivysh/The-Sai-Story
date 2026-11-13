@@ -254,13 +254,23 @@
     padding-top: 24px;
   }
 
+  .hero-eyebrow {
+    margin: 0 0 24px;
+    color: #00A8FF;
+    font-family: var(--font-manrope), sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 1.8;
+    letter-spacing: 0.13em;
+  }
+
   .hero-title {
-    font-size: clamp(38px, 4.3vw, 54px);
+    font-size: clamp(58px, 4.3vw, 54px);
   }
 
   .hero-tagline {
     margin-top: 18px;
-    font-size: clamp(20px, 2.4vw, 28px);
+    font-size: clamp(30px, 2.4vw, 28px);
   }
 
   .hero-image {
