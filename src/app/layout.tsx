@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Bebas_Neue, Manrope } from "next/font/google";
 import SiteShell from "./site-shell";
 import "./globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const bebasNeue = Bebas_Neue({
   weight: "400",
@@ -103,6 +104,10 @@ export default function RootLayout({
         />
 
         <SiteShell>{children}</SiteShell>
+        
+        {process.env.NODE_ENV === "production" && (
+          <GoogleAnalytics gaId="G-8QPQ24DK08" />
+        )}
       </body>
     </html>
   );
