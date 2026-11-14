@@ -4,6 +4,7 @@
 import { useState, type FormEvent } from "react";
 import Image from "next/image";
 import "./contact.css";
+import { sendGAEvent } from "@next/third-parties/google";
 
 const contacts = [
   {
@@ -84,6 +85,10 @@ export default function ContactPage() {
       }
 
       setStatus("success");
+
+      sendGAEvent("event", "contact_form_submit", {
+        form_name: "contact_page",
+      });
 
       setFormData({
         name: "",
@@ -252,6 +257,11 @@ export default function ContactPage() {
                 key={contact.name}
                 href={contact.href}
                 className="contact-detail"
+                onClick={() =>
+                  sendGAEvent("event", "contact_click", {
+                    contact_method: contact.name.toLowerCase(),
+                  })
+                }
                 target={
                   contact.external ? "_blank" : undefined
                 }
@@ -331,6 +341,11 @@ export default function ContactPage() {
           <a
             href="/assets/idivysh-resume.pdf"
             className="resume-button"
+            onClick={() =>
+              sendGAEvent("event", "resume_download", {
+                file_name: "idivysh-resume.pdf",
+              })
+            }
             download
           >
             <span>DOWNLOAD RESUME</span>

@@ -4,6 +4,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import "./contact-section.css";
+import { sendGAEvent } from "@next/third-parties/google";
 
 const contacts = [
   {
@@ -89,6 +90,11 @@ export default function ContactSection() {
                 key={contact.name}
                 href={contact.href}
                 className={`contact-item contact-item-${contact.name.toLowerCase()}`}
+                onClick={() =>
+                  sendGAEvent("event", "contact_click", {
+                    contact_method: contact.name.toLowerCase(),
+                  })
+                }
                 target={contact.external ? "_blank" : undefined}
                 rel={contact.external ? "noopener noreferrer" : undefined}
                 aria-label={contact.name}
@@ -147,6 +153,11 @@ export default function ContactSection() {
               <Link
                 href="/assets/idivysh-resume.pdf"
                 className="contact-resume-button"
+                onClick={() =>
+                  sendGAEvent("event", "resume_download", {
+                    file_name: "idivysh-resume.pdf",
+                  })
+                }
                 download
               >
                 <span>DOWNLOAD RESUME</span>
