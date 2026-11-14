@@ -18,9 +18,73 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "The Sai Story - My Portfolio",
-  description: "Crafted By Sai: People • Ideas • Creations",
+  metadataBase: new URL("https://thesaistory.com"),
+
+  title: {
+    default: "The Sai Story | My Portfolio",
+    template: "%s | The Sai Story",
+  },
+
+  description:
+    "The Sai Story — the portfolio of Divyamsh Sai Vengala, showcasing people, ideas and creations through web development, design and creative work.",
+
+  applicationName: "The Sai Story",
+
+  openGraph: {
+    siteName: "The Sai Story",
+    locale: "en_IN",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://thesaistory.com/#person",
+      name: "Divyamsh Sai Vengala",
+      url: "https://thesaistory.com",
+      description:
+        "Divyamsh Sai Vengala is a developer and creative professional working across web development, technology and visual design.",
+      knowsAbout: [
+        "Web Development",
+        "Frontend Development",
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Graphic Design",
+        "Brand Identity",
+        "UI Design",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://thesaistory.com/#website",
+      name: "The Sai Story",
+      alternateName: "The Sai Story — People, Ideas, Creations",
+      url: "https://thesaistory.com",
+      description:
+        "The portfolio of Divyamsh Sai Vengala, showcasing people, ideas and creations through web development, design and creative work.",
+      inLanguage: "en-IN",
+      publisher: {
+        "@id": "https://thesaistory.com/#person",
+      },
+    },
+  ],
+};
+
 
 export default function RootLayout({
   children,
@@ -31,6 +95,13 @@ export default function RootLayout({
       className={`${bebasNeue.variable} ${manrope.variable} h-full antialiased`}
     >
       <body className="min-h-full">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
+
         <SiteShell>{children}</SiteShell>
       </body>
     </html>

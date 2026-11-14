@@ -1,8 +1,21 @@
+import type { Metadata } from "next";
 
 import "./projects.css";
 
 import Image from "next/image";
 import { getAllProjects } from "../lib/projects";
+
+
+export const metadata: Metadata = {
+  title: "Projects & Case Studies",
+  description:
+    "Explore the web development, software engineering and technology projects created by Divyamsh Sai, featuring ideas transformed into digital experiences.",
+
+  alternates: {
+    canonical: "/projects",
+  },
+};
+
 
 
 const heartSkills = [

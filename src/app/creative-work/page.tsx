@@ -1,7 +1,20 @@
+import type { Metadata } from "next";
+
 
 import Image from "next/image";
 import Link from "next/link";
 import "./creative-work.css";
+
+export const metadata: Metadata = {
+  title: "Creative Work & Brand Identity",
+  description:
+    "Explore the creative work of Divyamsh Sai, featuring brand identities, visual design, packaging, digital experiences and creative projects.",
+  alternates: {
+    canonical: "/creative-work",
+  },
+};
+
+
 
 const projects = [
   {

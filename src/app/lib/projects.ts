@@ -2,6 +2,23 @@
 import { getGitHubRepositories } from "./github";
 import projectConfig from "./projects.config";
 
+function getValidProjectUrl(homepage?: string | null) {
+  if (!homepage) return null;
+
+  try {
+    const url = new URL(homepage);
+
+    if (url.protocol !== "https:" && url.protocol !== "http:") {
+      return null;
+    }
+
+    return url.toString();
+  } catch {
+    return null;
+  }
+}
+
+
 export async function getSelectedProjects() {
   const repositories = await getGitHubRepositories();
 
@@ -23,7 +40,7 @@ export async function getSelectedProjects() {
         image: config.image,
         featured: config.featured,
         order: config.order,
-        homepage: repository.homepage,
+        homepage: config.homepage ?? getValidProjectUrl(repository.homepage),
       };
     })
     .filter((project) => project !== null)
@@ -53,7 +70,7 @@ export async function getAllProjects() {
         image: config?.image,
         featured: config?.featured ?? false,
         order: config?.order ?? null,
-        homepage: repository.homepage,
+        homepage: config?.homepage ?? getValidProjectUrl(repository.homepage),
       };
     })
     .filter((project) => project !== null);

@@ -7,6 +7,7 @@ export interface ProjectConfig {
   title?: string;
   description?: string;
   image?: string;
+  homepage?: string;
 }
 
 const projectConfig: ProjectConfig[] = [
@@ -49,8 +50,9 @@ const projectConfig: ProjectConfig[] = [
     order: 4,
     visible: true,
     title: "RTDS Website",
-    description: "Professional website for Rasavika Typing & Digital Services, offering typing, data entry, resume creation, translation, and other digital services.",
+    description:"Professional website for Rasavika Typing & Digital Services, offering typing, data entry, resume creation, translation, and other digital services.",
     image: "/assets/projects/rtdsw.png",
+    homepage: "https://rtds-website-three.vercel.app/",
   },
 ];
 

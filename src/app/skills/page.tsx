@@ -1,7 +1,20 @@
+import type { Metadata } from "next";
 
 import "./skills.css";
 
 import Image from "next/image";
+
+
+export const metadata: Metadata = {
+  title: "Skills & Technical Expertise",
+  description:
+    "Explore Divyamsh Sai's technical and creative skills, including React, Next.js, TypeScript, Python, AI and machine learning, data analytics, graphic design and development tools.",
+  alternates: {
+    canonical: "/skills",
+  },
+};
+
+
 
 const developmentGroups = [
   {
