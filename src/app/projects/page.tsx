@@ -185,7 +185,7 @@ export default async function ProjectsPage() {
                 {project.image ? (
                   <Image
                     src={project.image}
-                    alt={project.title}
+                    alt={`${project.title} — project preview`}
                     fill
                     sizes="(max-width: 768px) 100vw, 42vw"
                     className="project-entry-image"

@@ -53,14 +53,14 @@ const creativeProjects: CreativeProject[] = [
     href: "/creative-work/rasoi-reel",
   },
   {
-    id: "nova-desk",
-    name: "NOVA DESK",
+    id: "noven-desk",
+    name: "NOVEN DESK",
     category: "PRODUCTIVITY & TECHNOLOGY",
     year: "2026",
     deliverables: "BRAND IDENTITY · DESKTOP UI DESIGN · MOBILE UI DESIGN",
     image: "/assets/creative-work/nova-desk-cover.png",
     mobileImage: "/assets/creative-work/nova-desk-cover-mobile.png",
-    alt: "Nova Desk UI UX design project presentation",
+    alt: "Noven Desk brand identity and desktop and mobile UI design presentation",
     href: "https://www.figma.com/design/c5Weszqe84Q8le0iCBddVL/Noven-Desk-%E2%80%94-UI-UX-Design?node-id=0-1&t=cADRno5ySVx2x5e2-1",
     external: true,
   },
@@ -262,7 +262,6 @@ export default function CreativeWork() {
                       src={project.image}
                       alt={project.alt}
                       fill
-                      priority={index === 0}
                       sizes="(max-width: 600px) 90vw, 88vw"
                       className="cw-project-cover"
                     />

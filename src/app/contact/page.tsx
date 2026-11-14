@@ -265,7 +265,7 @@ export default function ContactPage() {
 
                 <Image
                   src={contact.icon}
-                  alt={contact.name}
+                  alt=""
                   width={48}
                   height={48}
                   className="detail-logo"

@@ -155,9 +155,10 @@ export default function Experience() {
                   <div className="experience-logo-wrap">
                     <Image
                       src={item.logo}
-                      alt={`${item.company} logo`}
+                      alt={`${item.company} company logo`}
                       width={64}
                       height={64}
+                      sizes="64px"
                       className="experience-logo"
                     />
                   </div>

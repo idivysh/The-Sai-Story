@@ -133,9 +133,10 @@ export default function Education() {
                 {item.logo ? (
                   <Image
                     src={item.logo}
-                    alt={`${item.institution} logo`}
+                    alt={`${item.institution} educational institution logo`}
                     width={76}
                     height={76}
+                    sizes="(max-width: 768px) 44px, (max-width: 1100px) 60px, 76px"
                     className="education-logo"
                   />
                 ) : (

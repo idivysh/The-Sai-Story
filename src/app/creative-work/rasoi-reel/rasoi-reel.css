@@ -286,7 +286,6 @@
     transform 950ms cubic-bezier(.2, .7, .2, 1);
 
   transition-delay: var(--rasoi-delay, 0ms);
-  will-change: opacity, transform;
 }
 
 .rasoi-reveal.is-visible {

@@ -26,7 +26,7 @@ export default function Hero() {
         <div className="hero-image">
           <Image
             src="/assets/hero-myimage-desktop.png"
-            alt="Divyamsh Sai"
+            alt="Portrait of Divyamsh Sai Vengala, software developer and graphic designer"
             width={600}
             height={750}
             priority
@@ -36,10 +36,9 @@ export default function Hero() {
 
           <Image
             src="/assets/hero-myimage-mobile.png"
-            alt="Divyamsh Sai"
+            alt="Portrait of Divyamsh Sai Vengala, software developer and graphic designer"
             width={500}
             height={600}
-            priority
             sizes="(max-width: 768px) 85vw, 0px"
             className="hero-portrait hero-portrait-mobile"
           />

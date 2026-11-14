@@ -1036,34 +1036,6 @@ h6 {
   flex: 1;
 }
 
-/* =========================================
-   THE SAI STORY — GLOBAL WEBSITE BACKGROUND
-========================================= */
-
-.main-website {
-  position: relative;
-  isolation: isolate;
-  width: 100%;
-  min-height: 100vh;
-  min-height: 100dvh;
-  background: transparent;
-}
-
-.main-website::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-
-  background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6)
-    ),
-    url("/assets/main-background.png") center / cover no-repeat;
-}
-
 /* Mobile website background */
 
 @media (max-width: 600px) {

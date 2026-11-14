@@ -72,9 +72,10 @@ export default async function FeaturedProjects() {
                   {project.image ? (
                     <Image
                       src={project.image}
-                      alt={`${project.title} project cover`}
+                      alt={`${project.title} — project preview showcasing its design and development`}
                       width={1200}
                       height={800}
+                      sizes="(max-width: 600px) 90vw, (max-width: 1100px) 45vw, (max-width: 1700px) 22vw, 412px"
                       className="featured-project-image"
                     />
                   ) : (

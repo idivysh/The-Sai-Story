@@ -95,7 +95,7 @@ export default function ContactSection() {
                 >
                 <Image
                     src={contact.icon}
-                    alt={contact.name}
+                    alt=""
                     width={48}
                     height={48}
                     className="contact-icon"

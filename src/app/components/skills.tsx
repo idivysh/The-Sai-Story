@@ -69,6 +69,7 @@ export default function Skills() {
                   alt=""
                   className="skill-logo"
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
               <span className="skill-name">{skill.name}</span>

@@ -141,8 +141,8 @@ export default function CreativeWorkPage() {
                   sizes={
                     project.id === "avenlo-circuit" ||
                     project.id === "noven-desk"
-                      ? "(max-width: 600px) 100vw, 66vw"
-                      : "(max-width: 600px) 100vw, 33vw"
+                      ? "(max-width: 600px) 88vw, (max-width: 900px) 60vw, (max-width: 1744px) 57vw, 991px"
+                      : "(max-width: 600px) 88vw, (max-width: 900px) 30vw, (max-width: 1744px) 28vw, 475px"
                   }
                   className="cwp-image"
                 />

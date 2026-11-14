@@ -110,7 +110,7 @@ export default function About() {
           <div className="about-visual">
             <Image
               src="/assets/about-myimage.png"
-              alt="Divyamsh Sai — personal brand portrait"
+              alt="Portrait of Divyamsh Sai Vengala, developer, designer and founder of Vijnah Studio"
               width={900}
               height={1350}
               sizes="(max-width: 768px) 90vw, 42vw"

@@ -124,7 +124,7 @@ export default function NovenDeskPage() {
             width={2400}
             height={1350}
             priority
-            sizes="100vw"
+            sizes="(max-width: 600px) 92vw, (max-width: 1200px) 94vw, 92vw"
             className="noven-hero-image"
           />
 
