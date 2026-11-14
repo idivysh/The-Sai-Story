@@ -1,0 +1,703 @@
+
+/* =========================================
+   NOVEN DESK
+   PROJECT PAGE
+========================================= */
+
+.noven-project-page {
+  --noven-text: #DDE8F7;
+  --noven-body: #B8C4D3;
+  --noven-muted: #94A6BD;
+  --noven-blue: #00A8FF;
+
+  width: 100%;
+  min-height: 100vh;
+  overflow: clip;
+  color: var(--noven-text);
+  font-family: var(--font-manrope), sans-serif;
+}
+
+.noven-project-page *,
+.noven-project-page *::before,
+.noven-project-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.noven-hero {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  min-height: 650px;
+  overflow: hidden;
+  isolation: isolate;
+  background: #050912;
+}
+
+.noven-hero-picture {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.noven-hero-image {
+  position: absolute;
+  inset: 0;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center center;
+
+  animation: noven-hero-entrance 1.3s
+    cubic-bezier(.2, .7, .2, 1) both;
+}
+
+/* Subtle gradient for title readability */
+
+.noven-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+
+  background: linear-gradient(
+    to top,
+    rgba(5, 9, 18, 0.82) 0%,
+    rgba(5, 9, 18, 0.28) 30%,
+    transparent 65%
+  );
+}
+
+/* Hero text */
+
+.noven-hero-content {
+  position: absolute;
+  left: 5%;
+  bottom: 9%;
+  z-index: 2;
+  max-width: 90%;
+
+  animation: noven-content-entrance 1s 0.2s both;
+}
+
+/* Category tag */
+
+.noven-hero-category {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-bottom: 18px;
+
+  color: var(--noven-body);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.17em;
+}
+
+.noven-hero-category i {
+  display: block;
+  width: 25px;
+  height: 1px;
+  background: var(--noven-blue);
+}
+
+.noven-hero-content h1 {
+  margin: 0;
+
+  color: var(--noven-text);
+  font-family: var(--font-bebas-neue), sans-serif;
+  font-size: clamp(76px, 12vw, 180px);
+  font-weight: 400;
+  line-height: 0.88;
+  letter-spacing: 0.015em;
+
+  text-shadow: 0 3px 24px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================
+   PROJECT OVERVIEW
+========================================= */
+
+.noven-overview {
+  width: min(1240px, 86%);
+  margin: 0 auto;
+  padding: 150px 0 145px;
+}
+
+.noven-overview-heading {
+  margin-bottom: 65px;
+}
+
+.noven-eyebrow {
+  display: block;
+  margin-bottom: 20px;
+
+  color: var(--noven-blue);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.noven-overview-heading h2 {
+  max-width: 800px;
+  margin: 0;
+
+  color: var(--noven-text);
+  font-family: var(--font-bebas-neue), sans-serif;
+  font-size: clamp(48px, 7vw, 88px);
+  font-weight: 400;
+  line-height: 0.98;
+}
+
+.noven-overview-content {
+  display: grid;
+  grid-template-columns: 1.6fr 0.8fr;
+  gap: 12%;
+
+  padding-top: 35px;
+  border-top: 1px solid rgba(148, 166, 189, 0.2);
+}
+
+.noven-summary {
+  max-width: 700px;
+}
+
+.noven-overview-label {
+  display: block;
+  margin-bottom: 22px;
+
+  color: var(--noven-blue);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+}
+
+.noven-summary p {
+  margin: 0 0 17px;
+
+  color: var(--noven-body);
+  font-size: 14px;
+  line-height: 1.95;
+  font-weight: 400;
+}
+
+.noven-project-details {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.noven-project-details p {
+  margin: 0;
+
+  color: var(--noven-text);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   BRAND IDENTITY & DESKTOP GALLERY
+========================================= */
+
+.noven-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+
+  width: 100%;
+  padding: 0 4%;
+}
+
+.noven-gallery-item {
+  min-width: 0;
+  width: 100%;
+}
+
+/* Brand identity — full width */
+
+.noven-gallery-item.noven-full {
+  grid-column: 1 / -1;
+}
+
+/* Desktop UI — two images per row */
+
+.noven-gallery-item.noven-half {
+  grid-column: span 1;
+}
+
+/* Image border */
+
+.noven-gallery-image-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  border: 1px solid rgba(148, 166, 189, 0.25);
+  border-radius: 25px;
+  background: transparent;
+}
+
+/* Preserve gallery image ratio */
+
+.noven-gallery-image {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+
+  transition:
+    transform 900ms cubic-bezier(.2, .7, .2, 1);
+}
+
+/* Subtle image hover */
+
+@media (hover: hover) and (pointer: fine) {
+
+  .noven-gallery-image-wrap:hover .noven-gallery-image {
+    transform: scale(1.018);
+  }
+
+}
+
+
+/* =========================================
+   MOBILE UI GALLERY
+   DESKTOP & TABLET — FIVE IN ONE ROW
+========================================= */
+
+.noven-mobile-gallery {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: start;
+  gap: 20px;
+
+  width: 100%;
+  padding: 100px 4% 120px;
+}
+
+.noven-mobile-gallery-item {
+  min-width: 0;
+  width: 100%;
+}
+
+.noven-mobile-gallery-image-wrap {
+  width: 100%;
+  overflow: hidden;
+
+  border: 1px solid rgba(148, 166, 189, 0.25);
+  border-radius: 18px;
+  background: transparent;
+}
+
+.noven-mobile-gallery-image {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+
+  transition:
+    transform 900ms cubic-bezier(.2, .7, .2, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+  .noven-mobile-gallery-image-wrap:hover
+  .noven-mobile-gallery-image {
+    transform: scale(1.025);
+  }
+
+}
+
+
+/* =========================================
+   SCROLL REVEAL
+========================================= */
+
+.noven-reveal {
+  opacity: 0;
+  transform: translate3d(0, 38px, 0) scale(0.99);
+
+  transition:
+    opacity 850ms cubic-bezier(.2, .7, .2, 1),
+    transform 950ms cubic-bezier(.2, .7, .2, 1);
+
+  transition-delay: var(--noven-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.noven-reveal.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes noven-hero-entrance {
+  from {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes noven-content-entrance {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+  /* HERO IMAGE — FULL WIDTH, TOP ALIGNED */
+
+  .noven-hero {
+    height: 100svh;
+    min-height: 600px;
+    background: #050912;
+  }
+
+  .noven-hero-picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .noven-hero-image {
+    position: relative;
+
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+
+    display: block;
+    width: 100%;
+    height: auto;
+
+    object-fit: unset;
+    object-position: top center;
+
+    animation: none;
+  }
+
+  .noven-hero-overlay {
+    position: absolute;
+    inset: 0;
+  }
+
+  /* HERO TEXT */
+
+  .noven-hero-content {
+    left: 5%;
+    bottom: 8%;
+    max-width: 90%;
+  }
+
+  .noven-hero-category {
+    gap: 11px;
+    font-size: 9px;
+  }
+
+  .noven-hero-content h1 {
+    font-size: clamp(58px, 8.5vw, 105px);
+    line-height: 0.95;
+    letter-spacing: 0;
+  }
+
+
+  /* PROJECT OVERVIEW */
+
+  .noven-overview {
+    width: 88%;
+    padding: 110px 0 105px;
+  }
+
+  .noven-overview-heading {
+    margin-bottom: 48px;
+  }
+
+  .noven-overview-heading h2 {
+    font-size: clamp(55px, 7vw, 76px);
+  }
+
+  .noven-overview-content {
+    gap: 8%;
+  }
+
+
+  /* DESKTOP GALLERY */
+
+  .noven-gallery {
+    gap: 18px;
+    padding: 0 3%;
+  }
+
+  .noven-gallery-image-wrap {
+    border-radius: 20px;
+  }
+
+
+  /* MOBILE UI GALLERY */
+
+  .noven-mobile-gallery {
+    gap: 12px;
+    padding: 75px 3% 95px;
+  }
+
+  .noven-mobile-gallery-image-wrap {
+    border-radius: 12px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL TABLET
+========================================= */
+
+@media (min-width: 601px) and (max-width: 800px) {
+
+  .noven-hero-content {
+    left: 5%;
+    width: 90%;
+  }
+
+  .noven-hero-category {
+    font-size: 8px;
+  }
+
+  .noven-hero-content h1 {
+    font-size: clamp(48px, 8vw, 68px);
+    letter-spacing: -0.01em;
+  }
+
+  .noven-overview-content {
+    grid-template-columns: 1.4fr 0.9fr;
+    gap: 7%;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+  /* HERO IMAGE */
+
+  .noven-hero {
+    height: 100svh;
+    min-height: 600px;
+    background: #050912;
+  }
+
+  .noven-hero-picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .noven-hero-image {
+    position: relative;
+
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+
+    display: block;
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+    object-position: center top;
+
+    animation: none;
+  }
+
+  /* HERO TEXT */
+
+  .noven-hero-content {
+    left: 6%;
+    bottom: 9%;
+    max-width: 90%;
+  }
+
+  .noven-hero-category {
+    gap: 9px;
+    margin-bottom: 14px;
+    font-size: 8px;
+    letter-spacing: 0.12em;
+  }
+
+  .noven-hero-category i {
+    width: 15px;
+  }
+
+  .noven-hero-content h1 {
+    font-size: clamp(64px, 16vw, 105px);
+    line-height: 0.9;
+  }
+
+
+  /* PROJECT OVERVIEW */
+
+  .noven-overview {
+    width: 88%;
+    padding: 95px 0 90px;
+  }
+
+  .noven-overview-heading {
+    margin-bottom: 38px;
+  }
+
+  .noven-overview-heading h2 {
+    font-size: clamp(48px, 12vw, 68px);
+  }
+
+  .noven-overview-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-top: 28px;
+  }
+
+  .noven-overview-label {
+    margin-bottom: 15px;
+  }
+
+  .noven-summary p {
+    font-size: 13px;
+    line-height: 1.9;
+  }
+
+  .noven-project-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+
+  /* BRAND IDENTITY & DESKTOP UI
+     ALL FULL WIDTH ON MOBILE
+  */
+
+  .noven-gallery {
+    grid-template-columns: 1fr;
+    gap: 15px;
+
+    width: 100%;
+    padding: 0;
+  }
+
+  .noven-gallery-item.noven-full,
+  .noven-gallery-item.noven-half {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .noven-gallery-image-wrap {
+    width: 100%;
+    border: 1px solid rgba(148, 166, 189, 0.25);
+    border-radius: 12px;
+  }
+
+  .noven-gallery-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+
+  /* MOBILE UI — TWO IMAGES PER ROW */
+
+  .noven-mobile-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+
+    width: 100%;
+    padding: 55px 4% 75px;
+  }
+
+  .noven-mobile-gallery-item {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .noven-mobile-gallery-image-wrap {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .noven-mobile-gallery-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+}
+
+
+/* =========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .noven-project-page *,
+  .noven-project-page *::before,
+  .noven-project-page *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .noven-reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+}

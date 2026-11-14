@@ -1,0 +1,612 @@
+
+/* =========================================
+   RASOI REEL
+   PROJECT PAGE
+========================================= */
+
+.rasoi-project-page {
+  --rasoi-text: #DDE8F7;
+  --rasoi-body: #B8C4D3;
+  --rasoi-muted: #94A6BD;
+  --rasoi-blue: #00A8FF;
+
+  width: 100%;
+  min-height: 100vh;
+  overflow: clip;
+  color: var(--rasoi-text);
+  font-family: var(--font-manrope), sans-serif;
+}
+
+.rasoi-project-page *,
+.rasoi-project-page *::before,
+.rasoi-project-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.rasoi-hero {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  min-height: 650px;
+  overflow: hidden;
+  isolation: isolate;
+  background: #050912;
+}
+
+.rasoi-hero-picture {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.rasoi-hero-image {
+  position: absolute;
+  inset: 0;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center center;
+
+  animation: rasoi-hero-entrance 1.3s
+    cubic-bezier(.2, .7, .2, 1) both;
+}
+
+/* Subtle gradient for title readability */
+
+.rasoi-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+
+  background: linear-gradient(
+    to top,
+    rgba(5, 9, 18, 0.82) 0%,
+    rgba(5, 9, 18, 0.28) 30%,
+    transparent 65%
+  );
+}
+
+/* Hero text */
+
+.rasoi-hero-content {
+  position: absolute;
+  left: 5%;
+  bottom: 9%;
+  z-index: 2;
+  max-width: 90%;
+
+  animation: rasoi-content-entrance 1s 0.2s both;
+}
+
+/* Category tag */
+
+.rasoi-hero-category {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-bottom: 18px;
+
+  color: var(--rasoi-body);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.17em;
+}
+
+.rasoi-hero-category i {
+  display: block;
+  width: 25px;
+  height: 1px;
+  background: var(--rasoi-blue);
+}
+
+.rasoi-hero-content h1 {
+  margin: 0;
+
+  color: var(--rasoi-text);
+  font-family: var(--font-bebas-neue), sans-serif;
+  font-size: clamp(76px, 12vw, 180px);
+  font-weight: 400;
+  line-height: 0.88;
+  letter-spacing: 0.015em;
+
+  text-shadow: 0 3px 24px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================
+   PROJECT OVERVIEW
+========================================= */
+
+.rasoi-overview {
+  width: min(1240px, 86%);
+  margin: 0 auto;
+  padding: 150px 0 145px;
+}
+
+.rasoi-overview-heading {
+  margin-bottom: 65px;
+}
+
+.rasoi-eyebrow {
+  display: block;
+  margin-bottom: 20px;
+
+  color: var(--rasoi-blue);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.rasoi-overview-heading h2 {
+  max-width: 800px;
+  margin: 0;
+
+  color: var(--rasoi-text);
+  font-family: var(--font-bebas-neue), sans-serif;
+  font-size: clamp(48px, 7vw, 88px);
+  font-weight: 400;
+  line-height: 0.98;
+}
+
+.rasoi-overview-content {
+  display: grid;
+  grid-template-columns: 1.6fr 0.8fr;
+  gap: 12%;
+
+  padding-top: 35px;
+  border-top: 1px solid rgba(148, 166, 189, 0.2);
+}
+
+.rasoi-summary {
+  max-width: 700px;
+}
+
+.rasoi-overview-label {
+  display: block;
+  margin-bottom: 22px;
+
+  color: var(--rasoi-blue);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+}
+
+.rasoi-summary p {
+  margin: 0 0 17px;
+
+  color: var(--rasoi-body);
+  font-size: 14px;
+  line-height: 1.95;
+  font-weight: 400;
+}
+
+.rasoi-project-details {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.rasoi-project-details p {
+  margin: 0;
+
+  color: var(--rasoi-text);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   IMAGE GALLERY
+========================================= */
+
+.rasoi-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+
+  width: 100%;
+  padding: 0 4%;
+}
+
+.rasoi-gallery-item {
+  min-width: 0;
+  width: 100%;
+}
+
+/* Full-width images */
+
+.rasoi-gallery-item.rasoi-full {
+  grid-column: 1 / -1;
+}
+
+/* Paired images — available for future use */
+
+.rasoi-gallery-item.rasoi-half {
+  grid-column: span 1;
+}
+
+/* Image border */
+
+.rasoi-gallery-image-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  border: 1px solid rgba(148, 166, 189, 0.25);
+  border-radius: 25px;
+  background: transparent;
+}
+
+/* Preserve gallery image ratio */
+
+.rasoi-gallery-image {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+
+  transition:
+    transform 900ms cubic-bezier(.2, .7, .2, 1);
+}
+
+/* Subtle image hover */
+
+@media (hover: hover) and (pointer: fine) {
+
+  .rasoi-gallery-image-wrap:hover .rasoi-gallery-image {
+    transform: scale(1.018);
+  }
+
+}
+
+
+/* =========================================
+   SCROLL REVEAL
+========================================= */
+
+.rasoi-reveal {
+  opacity: 0;
+  transform: translate3d(0, 38px, 0) scale(0.99);
+
+  transition:
+    opacity 850ms cubic-bezier(.2, .7, .2, 1),
+    transform 950ms cubic-bezier(.2, .7, .2, 1);
+
+  transition-delay: var(--rasoi-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.rasoi-reveal.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes rasoi-hero-entrance {
+  from {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes rasoi-content-entrance {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+  /* HERO IMAGE — FULL WIDTH, TOP ALIGNED */
+
+  .rasoi-hero {
+    height: 100svh;
+    min-height: 600px;
+    background: #050912;
+  }
+
+  .rasoi-hero-picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .rasoi-hero-image {
+    position: relative;
+
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+
+    display: block;
+    width: 100%;
+    height: auto;
+
+    object-fit: unset;
+    object-position: top center;
+
+    animation: none;
+  }
+
+  .rasoi-hero-overlay {
+    position: absolute;
+    inset: 0;
+  }
+
+  /* HERO TEXT */
+
+  .rasoi-hero-content {
+    left: 5%;
+    bottom: 8%;
+    max-width: 90%;
+  }
+
+  .rasoi-hero-category {
+    gap: 11px;
+    font-size: 9px;
+  }
+
+  .rasoi-hero-content h1 {
+    font-size: clamp(58px, 8.5vw, 105px);
+    line-height: 0.95;
+    letter-spacing: 0;
+  }
+
+
+  /* PROJECT OVERVIEW */
+
+  .rasoi-overview {
+    width: 88%;
+    padding: 110px 0 105px;
+  }
+
+  .rasoi-overview-heading {
+    margin-bottom: 48px;
+  }
+
+  .rasoi-overview-heading h2 {
+    font-size: clamp(55px, 7vw, 76px);
+  }
+
+  .rasoi-overview-content {
+    gap: 8%;
+  }
+
+
+  /* GALLERY */
+
+  .rasoi-gallery {
+    gap: 18px;
+    padding: 0 3%;
+  }
+
+  .rasoi-gallery-image-wrap {
+    border-radius: 20px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL TABLET
+========================================= */
+
+@media (min-width: 601px) and (max-width: 800px) {
+
+  .rasoi-hero-content {
+    left: 5%;
+    width: 90%;
+  }
+
+  .rasoi-hero-category {
+    font-size: 8px;
+  }
+
+  .rasoi-hero-content h1 {
+    font-size: clamp(48px, 8vw, 68px);
+    letter-spacing: -0.01em;
+  }
+
+  .rasoi-overview-content {
+    grid-template-columns: 1.4fr 0.9fr;
+    gap: 7%;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+  /* HERO IMAGE */
+
+  .rasoi-hero {
+    height: 100svh;
+    min-height: 600px;
+    background: #050912;
+  }
+
+  .rasoi-hero-picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .rasoi-hero-image {
+    position: relative;
+
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+
+    display: block;
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+    object-position: center top;
+
+    animation: none;
+  }
+
+  /* HERO TEXT */
+
+  .rasoi-hero-content {
+    left: 6%;
+    bottom: 9%;
+    max-width: 90%;
+  }
+
+  .rasoi-hero-category {
+    gap: 9px;
+    margin-bottom: 14px;
+    font-size: 8px;
+    letter-spacing: 0.12em;
+  }
+
+  .rasoi-hero-category i {
+    width: 15px;
+  }
+
+  .rasoi-hero-content h1 {
+    font-size: clamp(64px, 16vw, 105px);
+    line-height: 0.9;
+  }
+
+
+  /* PROJECT OVERVIEW */
+
+  .rasoi-overview {
+    width: 88%;
+    padding: 95px 0 90px;
+  }
+
+  .rasoi-overview-heading {
+    margin-bottom: 38px;
+  }
+
+  .rasoi-overview-heading h2 {
+    font-size: clamp(48px, 12vw, 68px);
+  }
+
+  .rasoi-overview-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-top: 28px;
+  }
+
+  .rasoi-overview-label {
+    margin-bottom: 15px;
+  }
+
+  .rasoi-summary p {
+    font-size: 13px;
+    line-height: 1.9;
+  }
+
+  .rasoi-project-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+
+  /* GALLERY */
+
+  .rasoi-gallery {
+    grid-template-columns: 1fr;
+    gap: 15px;
+
+    width: 100%;
+    padding: 0;
+  }
+
+  .rasoi-gallery-item.rasoi-full,
+  .rasoi-gallery-item.rasoi-half {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .rasoi-gallery-image-wrap {
+    width: 100%;
+    border: 1px solid rgba(148, 166, 189, 0.25);
+    border-radius: 12px;
+  }
+
+  .rasoi-gallery-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+}
+
+
+/* =========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .rasoi-project-page *,
+  .rasoi-project-page *::before,
+  .rasoi-project-page *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .rasoi-reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+}
